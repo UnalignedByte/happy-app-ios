@@ -8,12 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		B56AC4FA20C324AE00111D65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56AC4F920C324AE00111D65 /* LaunchScreen.storyboard */; };
+		B56AC50220C32BD200111D65 /* DummyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56AC50120C32BD200111D65 /* DummyTests.swift */; };
+		B56AC50A20C32CD300111D65 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56AC50920C32CD300111D65 /* main.swift */; };
+		B56AC50C20C32D7700111D65 /* UnitTestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56AC50B20C32D7700111D65 /* UnitTestsAppDelegate.swift */; };
 		B5ED4B172091D165004FCD01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ED4B162091D165004FCD01 /* AppDelegate.swift */; };
 		B5ED4B1E2091D166004FCD01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5ED4B1D2091D166004FCD01 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B56AC50420C32BD200111D65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5ED4B0B2091D165004FCD01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5ED4B122091D165004FCD01;
+			remoteInfo = "Happy App";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		B56AC4F920C324AE00111D65 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B56AC4FF20C32BD200111D65 /* Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B56AC50120C32BD200111D65 /* DummyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTests.swift; sourceTree = "<group>"; };
+		B56AC50320C32BD200111D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B56AC50920C32CD300111D65 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B56AC50B20C32D7700111D65 /* UnitTestsAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestsAppDelegate.swift; sourceTree = "<group>"; };
 		B5ED4B132091D165004FCD01 /* Happy App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happy App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5ED4B162091D165004FCD01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5ED4B1D2091D166004FCD01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -21,6 +39,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B56AC4FC20C32BD200111D65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B5ED4B102091D165004FCD01 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -34,7 +59,7 @@
 		B56AC4F120C31FDB00111D65 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				B5ED4B162091D165004FCD01 /* AppDelegate.swift */,
+				B56AC50D20C32DBA00111D65 /* Core */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -56,6 +81,41 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B56AC50020C32BD200111D65 /* Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B56AC50E20C32DFF00111D65 /* Source */,
+				B56AC50F20C32E0500111D65 /* Supporting Files */,
+			);
+			path = "Unit Tests";
+			sourceTree = "<group>";
+		};
+		B56AC50D20C32DBA00111D65 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B56AC50920C32CD300111D65 /* main.swift */,
+				B5ED4B162091D165004FCD01 /* AppDelegate.swift */,
+				B56AC50B20C32D7700111D65 /* UnitTestsAppDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B56AC50E20C32DFF00111D65 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B56AC50120C32BD200111D65 /* DummyTests.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		B56AC50F20C32E0500111D65 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B56AC50320C32BD200111D65 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		B5ED4B0A2091D165004FCD01 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				B5ED4B132091D165004FCD01 /* Happy App.app */,
+				B56AC4FF20C32BD200111D65 /* Unit Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +139,7 @@
 				B56AC4F120C31FDB00111D65 /* Source */,
 				B56AC4F220C31FE000111D65 /* Assets */,
 				B56AC4F320C31FE500111D65 /* Supporting Files */,
+				B56AC50020C32BD200111D65 /* Unit Tests */,
 			);
 			path = "Happy App";
 			sourceTree = "<group>";
@@ -85,6 +147,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B56AC4FE20C32BD200111D65 /* Unit Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B56AC50620C32BD200111D65 /* Build configuration list for PBXNativeTarget "Unit Tests" */;
+			buildPhases = (
+				B56AC4FB20C32BD200111D65 /* Sources */,
+				B56AC4FC20C32BD200111D65 /* Frameworks */,
+				B56AC4FD20C32BD200111D65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B56AC50520C32BD200111D65 /* PBXTargetDependency */,
+			);
+			name = "Unit Tests";
+			productName = "Unit Tests";
+			productReference = B56AC4FF20C32BD200111D65 /* Unit Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B5ED4B122091D165004FCD01 /* Happy App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5ED4B302091D166004FCD01 /* Build configuration list for PBXNativeTarget "Happy App" */;
@@ -108,10 +188,14 @@
 		B5ED4B0B2091D165004FCD01 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = UnalignedByte;
 				TargetAttributes = {
+					B56AC4FE20C32BD200111D65 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = B5ED4B122091D165004FCD01;
+					};
 					B5ED4B122091D165004FCD01 = {
 						CreatedOnToolsVersion = 9.3;
 					};
@@ -130,11 +214,19 @@
 			projectRoot = "";
 			targets = (
 				B5ED4B122091D165004FCD01 /* Happy App */,
+				B56AC4FE20C32BD200111D65 /* Unit Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B56AC4FD20C32BD200111D65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B5ED4B112091D165004FCD01 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -147,17 +239,77 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B56AC4FB20C32BD200111D65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B56AC50220C32BD200111D65 /* DummyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B5ED4B0F2091D165004FCD01 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B56AC50C20C32D7700111D65 /* UnitTestsAppDelegate.swift in Sources */,
+				B56AC50A20C32CD300111D65 /* main.swift in Sources */,
 				B5ED4B172091D165004FCD01 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B56AC50520C32BD200111D65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5ED4B122091D165004FCD01 /* Happy App */;
+			targetProxy = B56AC50420C32BD200111D65 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		B56AC50720C32BD200111D65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X7G47FFC9G;
+				INFOPLIST_FILE = "Happy App/Unit Tests/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.unalignedbyte.unittests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Happy App.app/Happy App";
+			};
+			name = Debug;
+		};
+		B56AC50820C32BD200111D65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X7G47FFC9G;
+				INFOPLIST_FILE = "Happy App/Unit Tests/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.unalignedbyte.unittests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Happy App.app/Happy App";
+			};
+			name = Release;
+		};
 		B5ED4B2E2091D166004FCD01 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -313,6 +465,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B56AC50620C32BD200111D65 /* Build configuration list for PBXNativeTarget "Unit Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B56AC50720C32BD200111D65 /* Debug */,
+				B56AC50820C32BD200111D65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B5ED4B0E2091D165004FCD01 /* Build configuration list for PBXProject "Happy App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
