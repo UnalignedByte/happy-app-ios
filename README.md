@@ -12,5 +12,11 @@ This is the iOS client for the Happy App project. It has been created with RxSwi
 * 3D Shortcut
 * Notifications
 
+### MVP
+* Only UTC is supported
+* Submit a happiness state
+* View overall happiness state and a number of submissions
+* Users filtering based on IP Address
+
 ## Author
 The project has been created by Rafał Grodziński.
