@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxCocoa
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
