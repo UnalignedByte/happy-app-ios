@@ -12,6 +12,7 @@ This is the iOS client for the Happy App project. It has been created with RxSwi
 * Widget
 * 3D Shortcut
 * Notifications
+* Watch App
 
 ### MVP
 * Only UTC is supported
