@@ -9,7 +9,7 @@
 import XCTest
 import RxTest
 
-class Unit_Tests: XCTestCase {
+class UnitTests: XCTestCase {
     func testDummy() {
         XCTAssert(true)
     }
