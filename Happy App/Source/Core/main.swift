@@ -17,6 +17,4 @@ if isRunningTests {
     appDelegateClassString = NSStringFromClass(AppDelegate.self)
 }
 
-_ = withUnsafeMutablePointer(to: &CommandLine.unsafeArgv.pointee!) { argv in
-    UIApplicationMain(CommandLine.argc, argv, nil, appDelegateClassString)
-}
+UIApplicationMain(CommandLine.argc, CommandLine.unsafeArgv, nil, appDelegateClassString)
