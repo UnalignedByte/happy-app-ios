@@ -13,7 +13,7 @@ class MockDataFetcherInvalid {
 }
 
 extension MockDataFetcherInvalid: DataFetcherProtocol {
-    var happinessJsonData: Observable<Result> {
+    var happinessJsonData: Observable<Result<Data>> {
         return Observable.just(.failure)
     }
 }

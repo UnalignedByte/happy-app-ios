@@ -13,7 +13,7 @@ class MockDataFetcher {
 }
 
 extension MockDataFetcher: DataFetcherProtocol {
-    var happinessJsonData: Observable<Result> {
-        return Observable.just(.success)
+    var happinessJsonData: Observable<Result<Data>> {
+        return Observable.just(.success(Data()))
     }
 }

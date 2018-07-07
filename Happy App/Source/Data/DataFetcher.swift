@@ -9,14 +9,14 @@
 import RxSwift
 
 protocol DataFetcherProtocol {
-    var happinessJsonData: Observable<Result> { get }
+    var happinessJsonData: Observable<Result<Data>> { get }
 }
 
 class DataFetcher {
 }
 
 extension DataFetcher: DataFetcherProtocol {
-    var happinessJsonData: Observable<Result> {
+    var happinessJsonData: Observable<Result<Data>> {
         return Observable.just(Result.failure)
     }
 }

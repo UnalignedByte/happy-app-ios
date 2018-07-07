@@ -8,14 +8,23 @@
 
 import Foundation
 
-enum Result {
-    case success
+enum Result<T> {
+    case success(T)
     case failure
 
-    static func == (lhs: Result, rhs: Result) -> Bool {
+    var value: T? {
+        if case .success(let value) = self {
+            return value
+        }
+        return nil
+    }
+}
+
+extension Result: Equatable {
+    static func ==<T> (lhs: Result<T>, rhs: Result<T>) -> Bool {
         switch (lhs, rhs) {
         case (.success, .success):
-            fallthrough
+            return true
         case (.failure, .failure):
             return true
         default:
