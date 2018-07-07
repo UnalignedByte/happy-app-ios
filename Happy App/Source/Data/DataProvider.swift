@@ -24,10 +24,15 @@ extension DataProvider: DataProviderProtocol {
 
         return dataFetcher.happinessJsonData
         .map { result in
-            guard let _ = result.value else {
+            guard let jsonData = result.value else {
                 return .failure
             }
-            return .success(HappinessStatus())
+            let decoder = JSONDecoder()
+            guard let happinessStatus = try? decoder.decode(HappinessStatus.self, from: jsonData) else {
+                return .failure
+            }
+
+            return .success(happinessStatus)
         }
     }
 }

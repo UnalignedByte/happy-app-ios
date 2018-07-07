@@ -14,6 +14,15 @@ class MockDataFetcher {
 
 extension MockDataFetcher: DataFetcherProtocol {
     var happinessJsonData: Observable<Result<Data>> {
-        return Observable.just(.success(Data()))
+        guard let fileUrl = Bundle(for: MockDataFetcher.self)
+            .url(forResource: "happiness_status", withExtension: "json") else {
+            return Observable.just(.failure)
+        }
+
+        guard let jsonData = try? Data(contentsOf: fileUrl) else {
+            return Observable.just(.failure)
+        }
+
+        return Observable.just(.success(jsonData))
     }
 }

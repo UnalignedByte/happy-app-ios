@@ -56,6 +56,6 @@ class DataProviderTests: XCTestCase {
         let observable = dataProvider.happinessStatus.subscribeOn(scheduler)
         let value = try? observable.toBlocking().first()?.value
 
-        XCTAssertEqual(value??.overallPercentage, 75)
+        XCTAssertEqual(value??.overallPercentage, 86)
     }
 }
