@@ -28,4 +28,14 @@ class DataProviderTests: XCTestCase {
 
         XCTAssertEqual(result, Result.failure)
     }
+
+    func testInvalidFetcher() {
+        let dataProvider = DataProvider()
+        dataProvider.dataFetcher = MockDataFetcherInvalid()
+
+        let observable = dataProvider.happinessStatus.subscribeOn(scheduler)
+        let result = try? observable.toBlocking().first()
+
+        XCTAssertEqual(result, Result.failure)
+    }
 }

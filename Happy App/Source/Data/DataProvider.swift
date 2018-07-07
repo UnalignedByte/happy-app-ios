@@ -13,6 +13,7 @@ protocol DataProviderProtocol {
 }
 
 class DataProvider {
+    var dataFetcher: DataFetcherProtocol?
 }
 
 extension DataProvider: DataProviderProtocol {
