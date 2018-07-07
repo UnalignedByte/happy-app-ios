@@ -12,14 +12,14 @@ enum Result {
     case success
     case failure
 
-    static func ==(lhs: Result, rhs: Result) -> Bool {
+    static func == (lhs: Result, rhs: Result) -> Bool {
         switch (lhs, rhs) {
-            case (.success, .success):
-                fallthrough
-            case (.failure, .failure):
-                return true
-            default:
-                return false
+        case (.success, .success):
+            fallthrough
+        case (.failure, .failure):
+            return true
+        default:
+            return false
         }
     }
 }

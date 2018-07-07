@@ -1,8 +1,8 @@
 //
-//  DataProviderTests.swift
+//  DataFetcherTests.swift
 //  Unit Tests
 //
-//  Created by Rafal Grodzinski on 05/07/2018.
+//  Created by Rafal Grodzinski on 07/07/2018.
 //  Copyright © 2018 UnalignedByte. All rights reserved.
 //
 
@@ -12,7 +12,7 @@ import RxBlocking
 import RxSwift
 @testable import happyapp
 
-class DataProviderTests: XCTestCase {
+class DataFetcherTests: XCTestCase {
     var scheduler: ConcurrentDispatchQueueScheduler!
 
     override func setUp() {
@@ -20,10 +20,10 @@ class DataProviderTests: XCTestCase {
         scheduler = ConcurrentDispatchQueueScheduler(qos: .default)
     }
 
-    func testNoFetcher() {
-        let dataProvider = DataProvider()
+    func testFetchHappinessStatusWithoutUrl() {
+        let dataFetcher = DataFetcher()
 
-        let observable = dataProvider.happinessStatus.subscribeOn(scheduler)
+        let observable = dataFetcher.happinessJsonData.subscribeOn(scheduler)
         let result = try? observable.toBlocking().first()
 
         XCTAssertEqual(result, Result.failure)
