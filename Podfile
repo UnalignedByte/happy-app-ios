@@ -9,4 +9,5 @@ end
 
 target 'Unit Tests' do
   pod 'RxTest'
+  pod 'RxBlocking'
 end
