@@ -18,6 +18,6 @@ class DataProvider {
 
 extension DataProvider: DataProviderProtocol {
     var happinessStatus: Observable<Result> {
-        return Observable.just(Result.failure)
+        return dataFetcher?.happinessJsonData ?? Observable.just(Result.failure)
     }
 }
