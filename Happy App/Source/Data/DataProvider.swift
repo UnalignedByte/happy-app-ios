@@ -9,7 +9,7 @@
 import RxSwift
 
 protocol DataProviderProtocol {
-    var happinessStatus: Observable<Result<Int>> { get }
+    var happinessStatus: Observable<Result<HappinessStatus>> { get }
 }
 
 class DataProvider {
@@ -17,9 +17,9 @@ class DataProvider {
 }
 
 extension DataProvider: DataProviderProtocol {
-    var happinessStatus: Observable<Result<Int>> {
+    var happinessStatus: Observable<Result<HappinessStatus>> {
         guard let dataFetcher = dataFetcher else {
-            return Observable.just(Result<Int>.failure)
+            return Observable.just(Result<HappinessStatus>.failure)
         }
 
         return dataFetcher.happinessJsonData
@@ -27,7 +27,7 @@ extension DataProvider: DataProviderProtocol {
             guard let _ = result.value else {
                 return .failure
             }
-            return .success(75)
+            return .success(HappinessStatus())
         }
     }
 }

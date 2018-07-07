@@ -26,7 +26,7 @@ class DataProviderTests: XCTestCase {
         let observable = dataProvider.happinessStatus.subscribeOn(scheduler)
         let result = try? observable.toBlocking().first()
 
-        XCTAssertEqual(result, Result<Int>.failure)
+        XCTAssertEqual(result, Result<HappinessStatus>.failure)
     }
 
     func testInvalidFetcher() {
@@ -36,7 +36,7 @@ class DataProviderTests: XCTestCase {
         let observable = dataProvider.happinessStatus.subscribeOn(scheduler)
         let result = try? observable.toBlocking().first()
 
-        XCTAssertEqual(result, Result<Int>.failure)
+        XCTAssertEqual(result, Result<HappinessStatus>.failure)
     }
 
     func testValidDataFetcher() {
@@ -46,7 +46,7 @@ class DataProviderTests: XCTestCase {
         let observable = dataProvider.happinessStatus.subscribeOn(scheduler)
         let result = try? observable.toBlocking().first()
 
-        XCTAssertEqual(result, Result<Int>.success(0))
+        XCTAssertEqual(result, Result<HappinessStatus>.success(HappinessStatus()))
     }
 
     func testDataProviderData() {
@@ -56,6 +56,6 @@ class DataProviderTests: XCTestCase {
         let observable = dataProvider.happinessStatus.subscribeOn(scheduler)
         let value = try? observable.toBlocking().first()?.value
 
-        XCTAssertEqual(value, 75)
+        XCTAssertEqual(value??.overallPercentage, 75)
     }
 }
