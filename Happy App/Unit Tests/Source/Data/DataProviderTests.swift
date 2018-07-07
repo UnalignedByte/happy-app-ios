@@ -57,5 +57,6 @@ class DataProviderTests: XCTestCase {
         let value = try? observable.toBlocking().first()?.value
 
         XCTAssertEqual(value??.overallPercentage, 86)
+        XCTAssertEqual(value??.submissionsCount, 102)
     }
 }

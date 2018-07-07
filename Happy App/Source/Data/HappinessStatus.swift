@@ -10,6 +10,7 @@ import Foundation
 
 struct HappinessStatus {
     var overallPercentage: Int!
+    var submissionsCount: Int!
 }
 
 extension HappinessStatus: Codable {
