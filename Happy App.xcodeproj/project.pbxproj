@@ -18,6 +18,8 @@
 		B593A22620F169410010BE53 /* MockDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593A22520F169410010BE53 /* MockDataFetcher.swift */; };
 		B593A22820F170420010BE53 /* HappinessStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593A22720F170420010BE53 /* HappinessStatus.swift */; };
 		B593A22A20F1724A0010BE53 /* happiness_status.json in Resources */ = {isa = PBXBuildFile; fileRef = B593A22920F1724A0010BE53 /* happiness_status.json */; };
+		B593A22C20F1769C0010BE53 /* DataPusherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593A22B20F1769C0010BE53 /* DataPusherTests.swift */; };
+		B593A22E20F177A10010BE53 /* DataPusher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593A22D20F177A10010BE53 /* DataPusher.swift */; };
 		B5CD81B720EE7418009E0AD9 /* DataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD81B620EE7418009E0AD9 /* DataProviderTests.swift */; };
 		B5CD81BA20EE7766009E0AD9 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD81B920EE7766009E0AD9 /* DataProvider.swift */; };
 		B5CD81BC20EE77A2009E0AD9 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD81BB20EE77A2009E0AD9 /* Result.swift */; };
@@ -51,6 +53,8 @@
 		B593A22520F169410010BE53 /* MockDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataFetcher.swift; sourceTree = "<group>"; };
 		B593A22720F170420010BE53 /* HappinessStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappinessStatus.swift; sourceTree = "<group>"; };
 		B593A22920F1724A0010BE53 /* happiness_status.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = happiness_status.json; sourceTree = "<group>"; };
+		B593A22B20F1769C0010BE53 /* DataPusherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPusherTests.swift; sourceTree = "<group>"; };
+		B593A22D20F177A10010BE53 /* DataPusher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPusher.swift; sourceTree = "<group>"; };
 		B5CD81B220EE7352009E0AD9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B5CD81B620EE7418009E0AD9 /* DataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderTests.swift; sourceTree = "<group>"; };
 		B5CD81B920EE7766009E0AD9 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 			children = (
 				B593A22120F164300010BE53 /* DataFetcherTests.swift */,
 				B5CD81B620EE7418009E0AD9 /* DataProviderTests.swift */,
+				B593A22B20F1769C0010BE53 /* DataPusherTests.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 				B593A22720F170420010BE53 /* HappinessStatus.swift */,
 				B5CD81B920EE7766009E0AD9 /* DataProvider.swift */,
 				B593A21F20F1640A0010BE53 /* DataFetcher.swift */,
+				B593A22D20F177A10010BE53 /* DataPusher.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -438,6 +444,7 @@
 			files = (
 				B593A22420F167D60010BE53 /* MockDataFetcherInvalid.swift in Sources */,
 				B593A22620F169410010BE53 /* MockDataFetcher.swift in Sources */,
+				B593A22C20F1769C0010BE53 /* DataPusherTests.swift in Sources */,
 				B5CD81B720EE7418009E0AD9 /* DataProviderTests.swift in Sources */,
 				B593A22220F164300010BE53 /* DataFetcherTests.swift in Sources */,
 			);
@@ -451,6 +458,7 @@
 				B593A22820F170420010BE53 /* HappinessStatus.swift in Sources */,
 				B5CD81BC20EE77A2009E0AD9 /* Result.swift in Sources */,
 				B56AC50A20C32CD300111D65 /* main.swift in Sources */,
+				B593A22E20F177A10010BE53 /* DataPusher.swift in Sources */,
 				B593A22020F1640A0010BE53 /* DataFetcher.swift in Sources */,
 				B5CD81BA20EE7766009E0AD9 /* DataProvider.swift in Sources */,
 				B5ED4B172091D165004FCD01 /* AppDelegate.swift in Sources */,

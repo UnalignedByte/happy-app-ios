@@ -17,6 +17,6 @@ class DataFetcher {
 
 extension DataFetcher: DataFetcherProtocol {
     var happinessJsonData: Observable<Result<Data>> {
-        return Observable.just(Result.failure)
+        return Observable.just(.failure)
     }
 }
