@@ -1,5 +1,5 @@
 //
-//  DataProvider.swift
+//  DataManager.swift
 //  Happy App
 //
 //  Created by Rafal Grodzinski on 05/07/2018.
@@ -8,16 +8,17 @@
 
 import RxSwift
 
-protocol DataProviderProtocol {
+protocol DataManagerProtocol {
     func fetchHappinessStatus() -> Observable<Result<HappinessStatus>>
     func push(happinessSubmission: HappinessSubmission) -> Observable<Result<Void>>
 }
 
-class DataProvider {
+class DataManager {
     var dataFetcher: DataFetcherProtocol?
+    var dataPusher: DataPusherProtocol?
 }
 
-extension DataProvider: DataProviderProtocol {
+extension DataManager: DataManagerProtocol {
     func fetchHappinessStatus() -> Observable<Result<HappinessStatus>> {
         guard let dataFetcher = dataFetcher else {
             return Observable.just(.failure)
@@ -38,6 +39,23 @@ extension DataProvider: DataProviderProtocol {
     }
 
     func push(happinessSubmission: HappinessSubmission) -> Observable<Result<Void>> {
-        return Observable.just(.failure)
+        guard let dataPusher = dataPusher else {
+            return Observable.just(.failure)
+        }
+
+        let encoder = JSONEncoder()
+        guard let jsonData = try? encoder.encode(happinessSubmission) else {
+            return Observable.just(.failure)
+        }
+
+        return dataPusher.push(happinessSubmissionJsonData: jsonData)
+        .map { result in
+            switch result {
+            case .success:
+                return .success(())
+            case .failure:
+                return .failure
+            }
+        }
     }
 }
