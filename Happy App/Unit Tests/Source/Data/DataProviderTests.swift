@@ -54,9 +54,12 @@ class DataProviderTests: XCTestCase {
         dataProvider.dataFetcher = MockDataFetcher()
 
         let observable = dataProvider.happinessStatus.subscribeOn(scheduler)
-        let value = try? observable.toBlocking().first()?.value
+        guard let value = try? observable.toBlocking().first()?.value else {
+            XCTFail("Failed to get a value")
+            return
+        }
 
-        XCTAssertEqual(value??.overallPercentage, 86)
-        XCTAssertEqual(value??.submissionsCount, 102)
+        XCTAssertEqual(value?.overallPercentage, 86)
+        XCTAssertEqual(value?.submissionsCount, 102)
     }
 }

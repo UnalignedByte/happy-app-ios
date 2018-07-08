@@ -9,19 +9,14 @@
 import RxSwift
 
 protocol DataPusherProtocol {
-    var submissionStatus: Observable<Result<String>> { get }
-
-    func push(happinessSubmissionJsonData: Data)
+    func push(happinessSubmissionJsonData: Data) -> Observable<Result<Void>>
 }
 
 class DataPusher {
 }
 
 extension DataPusher: DataPusherProtocol {
-    var submissionStatus: Observable<Result<String>> {
+    func push(happinessSubmissionJsonData: Data) -> Observable<Result<Void>> {
         return Observable.just(.failure)
-    }
-
-    func push(happinessSubmissionJsonData: Data) {
     }
 }

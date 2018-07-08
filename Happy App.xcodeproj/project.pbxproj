@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B66766E996EF96374590067 /* Pods_Unit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E7BD66A2542A695AA97819B /* Pods_Unit_Tests.framework */; };
 		97FB2F093A4A90240417D18E /* Pods_Happy_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D3E4F3643FFAA3B52FE5D75 /* Pods_Happy_App.framework */; };
+		B5034D7520F2B5BE0053B9EC /* DataPusherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593A22B20F1769C0010BE53 /* DataPusherTests.swift */; };
 		B56AC4FA20C324AE00111D65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56AC4F920C324AE00111D65 /* LaunchScreen.storyboard */; };
 		B56AC50A20C32CD300111D65 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56AC50920C32CD300111D65 /* main.swift */; };
 		B56AC50C20C32D7700111D65 /* UnitTestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56AC50B20C32D7700111D65 /* UnitTestsAppDelegate.swift */; };
@@ -18,7 +19,6 @@
 		B593A22620F169410010BE53 /* MockDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593A22520F169410010BE53 /* MockDataFetcher.swift */; };
 		B593A22820F170420010BE53 /* HappinessStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593A22720F170420010BE53 /* HappinessStatus.swift */; };
 		B593A22A20F1724A0010BE53 /* happiness_status.json in Resources */ = {isa = PBXBuildFile; fileRef = B593A22920F1724A0010BE53 /* happiness_status.json */; };
-		B593A22C20F1769C0010BE53 /* DataPusherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593A22B20F1769C0010BE53 /* DataPusherTests.swift */; };
 		B593A22E20F177A10010BE53 /* DataPusher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593A22D20F177A10010BE53 /* DataPusher.swift */; };
 		B5CD81B720EE7418009E0AD9 /* DataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD81B620EE7418009E0AD9 /* DataProviderTests.swift */; };
 		B5CD81BA20EE7766009E0AD9 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD81B920EE7766009E0AD9 /* DataProvider.swift */; };
@@ -444,7 +444,7 @@
 			files = (
 				B593A22420F167D60010BE53 /* MockDataFetcherInvalid.swift in Sources */,
 				B593A22620F169410010BE53 /* MockDataFetcher.swift in Sources */,
-				B593A22C20F1769C0010BE53 /* DataPusherTests.swift in Sources */,
+				B5034D7520F2B5BE0053B9EC /* DataPusherTests.swift in Sources */,
 				B5CD81B720EE7418009E0AD9 /* DataProviderTests.swift in Sources */,
 				B593A22220F164300010BE53 /* DataFetcherTests.swift in Sources */,
 			);

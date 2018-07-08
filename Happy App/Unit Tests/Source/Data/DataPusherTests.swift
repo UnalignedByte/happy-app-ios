@@ -23,7 +23,7 @@ class DataPusherTests: XCTestCase {
     func testPushHappinessStatusWithoutUrl() {
         let dataPusher = DataPusher()
 
-        let observable = dataPusher.submissionStatus.subscribeOn(scheduler)
+        let observable = dataPusher.push(happinessSubmissionJsonData: Data()).subscribeOn(scheduler)
         let result = try? observable.toBlocking().first()
 
         XCTAssertEqual(result, .failure)
