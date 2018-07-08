@@ -23,7 +23,7 @@ class DataProviderTests: XCTestCase {
     func testNoFetcher() {
         let dataProvider = DataProvider()
 
-        let observable = dataProvider.happinessStatus.subscribeOn(scheduler)
+        let observable = dataProvider.fetchHappinessStatus().subscribeOn(scheduler)
         let result = try? observable.toBlocking().first()
 
         XCTAssertEqual(result, Result<HappinessStatus>.failure)
@@ -33,7 +33,7 @@ class DataProviderTests: XCTestCase {
         let dataProvider = DataProvider()
         dataProvider.dataFetcher = MockDataFetcherInvalid()
 
-        let observable = dataProvider.happinessStatus.subscribeOn(scheduler)
+        let observable = dataProvider.fetchHappinessStatus().subscribeOn(scheduler)
         let result = try? observable.toBlocking().first()
 
         XCTAssertEqual(result, Result<HappinessStatus>.failure)
@@ -43,7 +43,7 @@ class DataProviderTests: XCTestCase {
         let dataProvider = DataProvider()
         dataProvider.dataFetcher = MockDataFetcher()
 
-        let observable = dataProvider.happinessStatus.subscribeOn(scheduler)
+        let observable = dataProvider.fetchHappinessStatus().subscribeOn(scheduler)
         let result = try? observable.toBlocking().first()
 
         XCTAssertEqual(result, Result<HappinessStatus>.success(HappinessStatus()))
@@ -53,7 +53,7 @@ class DataProviderTests: XCTestCase {
         let dataProvider = DataProvider()
         dataProvider.dataFetcher = MockDataFetcher()
 
-        let observable = dataProvider.happinessStatus.subscribeOn(scheduler)
+        let observable = dataProvider.fetchHappinessStatus().subscribeOn(scheduler)
         guard let value = try? observable.toBlocking().first()?.value else {
             XCTFail("Failed to get a value")
             return
@@ -61,5 +61,14 @@ class DataProviderTests: XCTestCase {
 
         XCTAssertEqual(value?.overallPercentage, 86)
         XCTAssertEqual(value?.submissionsCount, 102)
+    }
+
+    func testNoPusher() {
+        let dataProvider = DataProvider()
+
+        let observable = dataProvider.push(happinessSubmission: HappinessSubmission()).subscribeOn(scheduler)
+        let result = try? observable.toBlocking().first()
+
+        XCTAssertEqual(result, Result<Void>.failure)
     }
 }

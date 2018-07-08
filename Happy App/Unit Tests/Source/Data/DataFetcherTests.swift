@@ -26,6 +26,6 @@ class DataFetcherTests: XCTestCase {
         let observable = dataFetcher.fetchHappinessJsonData().subscribeOn(scheduler)
         let result = try? observable.toBlocking().first()
 
-        XCTAssertEqual(result, Result<Data>.failure)
+        XCTAssertEqual(result, .failure)
     }
 }
