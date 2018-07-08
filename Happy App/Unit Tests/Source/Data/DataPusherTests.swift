@@ -6,11 +6,11 @@
 //  Copyright © 2018 UnalignedByte. All rights reserved.
 //
 
+@testable import happyapp
 import XCTest
 import RxTest
 import RxBlocking
 import RxSwift
-@testable import happyapp
 
 class DataPusherTests: XCTestCase {
     var scheduler: ConcurrentDispatchQueueScheduler!

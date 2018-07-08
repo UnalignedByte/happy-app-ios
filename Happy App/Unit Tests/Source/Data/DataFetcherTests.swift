@@ -6,11 +6,11 @@
 //  Copyright © 2018 UnalignedByte. All rights reserved.
 //
 
+@testable import happyapp
 import XCTest
 import RxTest
 import RxBlocking
 import RxSwift
-@testable import happyapp
 
 class DataFetcherTests: XCTestCase {
     var scheduler: ConcurrentDispatchQueueScheduler!
@@ -23,7 +23,7 @@ class DataFetcherTests: XCTestCase {
     func testFetchHappinessStatusWithoutUrl() {
         let dataFetcher = DataFetcher()
 
-        let observable = dataFetcher.happinessJsonData.subscribeOn(scheduler)
+        let observable = dataFetcher.fetchHappinessJsonData().subscribeOn(scheduler)
         let result = try? observable.toBlocking().first()
 
         XCTAssertEqual(result, Result<Data>.failure)

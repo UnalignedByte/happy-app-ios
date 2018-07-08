@@ -22,7 +22,7 @@ extension DataProvider: DataProviderProtocol {
             return Observable.just(Result<HappinessStatus>.failure)
         }
 
-        return dataFetcher.happinessJsonData
+        return dataFetcher.fetchHappinessJsonData()
         .map { result in
             guard let jsonData = result.value else {
                 return .failure

@@ -6,14 +6,14 @@
 //  Copyright © 2018 UnalignedByte. All rights reserved.
 //
 
-import RxSwift
 @testable import happyapp
+import RxSwift
 
 class MockDataFetcherInvalid {
 }
 
 extension MockDataFetcherInvalid: DataFetcherProtocol {
-    var happinessJsonData: Observable<Result<Data>> {
+    func fetchHappinessJsonData() -> Observable<Result<Data>> {
         return Observable.just(.failure)
     }
 }
