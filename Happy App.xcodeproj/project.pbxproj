@@ -503,6 +503,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.unalignedbyte.unittests;
+				PRODUCT_MODULE_NAME = UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Happy App.app/Happy App";
@@ -524,6 +525,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.unalignedbyte.unittests;
+				PRODUCT_MODULE_NAME = UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Happy App.app/Happy App";
@@ -661,7 +663,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.unalignedbyte.happyapp;
-				PRODUCT_MODULE_NAME = happyapp;
+				PRODUCT_MODULE_NAME = HappyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -680,7 +682,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.unalignedbyte.happyapp;
-				PRODUCT_MODULE_NAME = happyapp;
+				PRODUCT_MODULE_NAME = HappyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

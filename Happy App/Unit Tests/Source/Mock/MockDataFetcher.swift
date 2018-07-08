@@ -6,7 +6,7 @@
 //  Copyright © 2018 UnalignedByte. All rights reserved.
 //
 
-@testable import happyapp
+@testable import HappyApp
 import RxSwift
 
 class MockDataFetcher {
