@@ -23,7 +23,7 @@ class DataFetcherTests: XCTestCase {
     func testFetchHappinessStatusWithoutUrl() {
         let dataFetcher = DataFetcher()
 
-        let observable = dataFetcher.fetchHappinessJsonData().subscribeOn(scheduler)
+        let observable = dataFetcher.fetchHappinessStatusJsonData().subscribeOn(scheduler)
         let result = try? observable.toBlocking().first()
 
         XCTAssertEqual(result, .failure)

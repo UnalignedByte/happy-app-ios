@@ -24,7 +24,7 @@ extension DataManager: DataManagerProtocol {
             return Observable.just(.failure)
         }
 
-        return dataFetcher.fetchHappinessJsonData()
+        return dataFetcher.fetchHappinessStatusJsonData()
         .map { result in
             guard let jsonData = result.value else {
                 return .failure
