@@ -9,10 +9,24 @@
 /* Begin PBXBuildFile section */
 		0B66766E996EF96374590067 /* Pods_Unit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E7BD66A2542A695AA97819B /* Pods_Unit_Tests.framework */; };
 		97FB2F093A4A90240417D18E /* Pods_Happy_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D3E4F3643FFAA3B52FE5D75 /* Pods_Happy_App.framework */; };
+		B5034D7520F2B5BE0053B9EC /* DataPusherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593A22B20F1769C0010BE53 /* DataPusherTests.swift */; };
+		B5034D7720F2B8D40053B9EC /* HappinessSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5034D7620F2B8D40053B9EC /* HappinessSubmission.swift */; };
+		B5034D7920F2B9A30053B9EC /* MockDataPusherInvalid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5034D7820F2B9A30053B9EC /* MockDataPusherInvalid.swift */; };
+		B5034D7B20F2BA9C0053B9EC /* MockDataPusher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5034D7A20F2BA9C0053B9EC /* MockDataPusher.swift */; };
 		B56AC4FA20C324AE00111D65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56AC4F920C324AE00111D65 /* LaunchScreen.storyboard */; };
-		B56AC50220C32BD200111D65 /* DummyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56AC50120C32BD200111D65 /* DummyTests.swift */; };
 		B56AC50A20C32CD300111D65 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56AC50920C32CD300111D65 /* main.swift */; };
 		B56AC50C20C32D7700111D65 /* UnitTestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56AC50B20C32D7700111D65 /* UnitTestsAppDelegate.swift */; };
+		B593A22020F1640A0010BE53 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593A21F20F1640A0010BE53 /* DataFetcher.swift */; };
+		B593A22220F164300010BE53 /* DataFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593A22120F164300010BE53 /* DataFetcherTests.swift */; };
+		B593A22420F167D60010BE53 /* MockDataFetcherInvalid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593A22320F167D60010BE53 /* MockDataFetcherInvalid.swift */; };
+		B593A22620F169410010BE53 /* MockDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593A22520F169410010BE53 /* MockDataFetcher.swift */; };
+		B593A22820F170420010BE53 /* HappinessStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593A22720F170420010BE53 /* HappinessStatus.swift */; };
+		B593A22A20F1724A0010BE53 /* happiness_status.json in Resources */ = {isa = PBXBuildFile; fileRef = B593A22920F1724A0010BE53 /* happiness_status.json */; };
+		B593A22E20F177A10010BE53 /* DataPusher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593A22D20F177A10010BE53 /* DataPusher.swift */; };
+		B5CD81B720EE7418009E0AD9 /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD81B620EE7418009E0AD9 /* DataManagerTests.swift */; };
+		B5CD81BA20EE7766009E0AD9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD81B920EE7766009E0AD9 /* DataManager.swift */; };
+		B5CD81BC20EE77A2009E0AD9 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD81BB20EE77A2009E0AD9 /* Result.swift */; };
+		B5E6456720F3C03900849EB7 /* WebApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E6456620F3C03900849EB7 /* WebApi.swift */; };
 		B5ED4B172091D165004FCD01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ED4B162091D165004FCD01 /* AppDelegate.swift */; };
 		B5ED4B1E2091D166004FCD01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5ED4B1D2091D166004FCD01 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -32,12 +46,27 @@
 		2B79FCC9BB2859C765F08850 /* Pods-Happy App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happy App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Happy App/Pods-Happy App.debug.xcconfig"; sourceTree = "<group>"; };
 		5D3E4F3643FFAA3B52FE5D75 /* Pods_Happy_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Happy_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E7BD66A2542A695AA97819B /* Pods_Unit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Unit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5034D7620F2B8D40053B9EC /* HappinessSubmission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappinessSubmission.swift; sourceTree = "<group>"; };
+		B5034D7820F2B9A30053B9EC /* MockDataPusherInvalid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataPusherInvalid.swift; sourceTree = "<group>"; };
+		B5034D7A20F2BA9C0053B9EC /* MockDataPusher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataPusher.swift; sourceTree = "<group>"; };
 		B56AC4F920C324AE00111D65 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B56AC4FF20C32BD200111D65 /* Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B56AC50120C32BD200111D65 /* DummyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTests.swift; sourceTree = "<group>"; };
 		B56AC50320C32BD200111D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B56AC50920C32CD300111D65 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B56AC50B20C32D7700111D65 /* UnitTestsAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestsAppDelegate.swift; sourceTree = "<group>"; };
+		B593A21F20F1640A0010BE53 /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
+		B593A22120F164300010BE53 /* DataFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherTests.swift; sourceTree = "<group>"; };
+		B593A22320F167D60010BE53 /* MockDataFetcherInvalid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataFetcherInvalid.swift; sourceTree = "<group>"; };
+		B593A22520F169410010BE53 /* MockDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataFetcher.swift; sourceTree = "<group>"; };
+		B593A22720F170420010BE53 /* HappinessStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappinessStatus.swift; sourceTree = "<group>"; };
+		B593A22920F1724A0010BE53 /* happiness_status.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = happiness_status.json; sourceTree = "<group>"; };
+		B593A22B20F1769C0010BE53 /* DataPusherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPusherTests.swift; sourceTree = "<group>"; };
+		B593A22D20F177A10010BE53 /* DataPusher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPusher.swift; sourceTree = "<group>"; };
+		B5CD81B220EE7352009E0AD9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B5CD81B620EE7418009E0AD9 /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
+		B5CD81B920EE7766009E0AD9 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		B5CD81BB20EE77A2009E0AD9 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		B5E6456620F3C03900849EB7 /* WebApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApi.swift; sourceTree = "<group>"; };
 		B5ED4B132091D165004FCD01 /* Happy App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happy App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5ED4B162091D165004FCD01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5ED4B1D2091D166004FCD01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				B56AC50D20C32DBA00111D65 /* Core */,
+				B5CD81B820EE7755009E0AD9 /* Data */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -106,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				B56AC50E20C32DFF00111D65 /* Source */,
+				B5CD81B320EE73A1009E0AD9 /* Assets */,
 				B56AC50F20C32E0500111D65 /* Supporting Files */,
 			);
 			path = "Unit Tests";
@@ -117,6 +148,7 @@
 				B56AC50920C32CD300111D65 /* main.swift */,
 				B5ED4B162091D165004FCD01 /* AppDelegate.swift */,
 				B56AC50B20C32D7700111D65 /* UnitTestsAppDelegate.swift */,
+				B5CD81BB20EE77A2009E0AD9 /* Result.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -124,7 +156,8 @@
 		B56AC50E20C32DFF00111D65 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				B56AC50120C32BD200111D65 /* DummyTests.swift */,
+				B5CD81B420EE73BA009E0AD9 /* Mock */,
+				B5CD81B520EE73C2009E0AD9 /* Data */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -137,9 +170,52 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B5CD81B320EE73A1009E0AD9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B593A22920F1724A0010BE53 /* happiness_status.json */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		B5CD81B420EE73BA009E0AD9 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				B593A22320F167D60010BE53 /* MockDataFetcherInvalid.swift */,
+				B593A22520F169410010BE53 /* MockDataFetcher.swift */,
+				B5034D7820F2B9A30053B9EC /* MockDataPusherInvalid.swift */,
+				B5034D7A20F2BA9C0053B9EC /* MockDataPusher.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		B5CD81B520EE73C2009E0AD9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B593A22120F164300010BE53 /* DataFetcherTests.swift */,
+				B593A22B20F1769C0010BE53 /* DataPusherTests.swift */,
+				B5CD81B620EE7418009E0AD9 /* DataManagerTests.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B5CD81B820EE7755009E0AD9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B593A22720F170420010BE53 /* HappinessStatus.swift */,
+				B5034D7620F2B8D40053B9EC /* HappinessSubmission.swift */,
+				B5E6456620F3C03900849EB7 /* WebApi.swift */,
+				B593A21F20F1640A0010BE53 /* DataFetcher.swift */,
+				B593A22D20F177A10010BE53 /* DataPusher.swift */,
+				B5CD81B920EE7766009E0AD9 /* DataManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		B5ED4B0A2091D165004FCD01 = {
 			isa = PBXGroup;
 			children = (
+				B5CD81B220EE7352009E0AD9 /* README.md */,
 				B5ED4B152091D165004FCD01 /* Happy App */,
 				B5ED4B142091D165004FCD01 /* Products */,
 				7F0C34A71D3D198C933C9253 /* Pods */,
@@ -263,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B593A22A20F1724A0010BE53 /* happiness_status.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,12 +419,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Unit Tests/Pods-Unit Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Mockingjay/Mockingjay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+				"${BUILT_PRODUCTS_DIR}/URITemplate/URITemplate.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mockingjay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/URITemplate.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -375,7 +458,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B56AC50220C32BD200111D65 /* DummyTests.swift in Sources */,
+				B593A22420F167D60010BE53 /* MockDataFetcherInvalid.swift in Sources */,
+				B593A22620F169410010BE53 /* MockDataFetcher.swift in Sources */,
+				B5034D7520F2B5BE0053B9EC /* DataPusherTests.swift in Sources */,
+				B5CD81B720EE7418009E0AD9 /* DataManagerTests.swift in Sources */,
+				B5034D7920F2B9A30053B9EC /* MockDataPusherInvalid.swift in Sources */,
+				B593A22220F164300010BE53 /* DataFetcherTests.swift in Sources */,
+				B5034D7B20F2BA9C0053B9EC /* MockDataPusher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +473,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B56AC50C20C32D7700111D65 /* UnitTestsAppDelegate.swift in Sources */,
+				B593A22820F170420010BE53 /* HappinessStatus.swift in Sources */,
+				B5034D7720F2B8D40053B9EC /* HappinessSubmission.swift in Sources */,
+				B5CD81BC20EE77A2009E0AD9 /* Result.swift in Sources */,
 				B56AC50A20C32CD300111D65 /* main.swift in Sources */,
+				B593A22E20F177A10010BE53 /* DataPusher.swift in Sources */,
+				B593A22020F1640A0010BE53 /* DataFetcher.swift in Sources */,
+				B5E6456720F3C03900849EB7 /* WebApi.swift in Sources */,
+				B5CD81BA20EE7766009E0AD9 /* DataManager.swift in Sources */,
 				B5ED4B172091D165004FCD01 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +511,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.unalignedbyte.unittests;
+				PRODUCT_MODULE_NAME = UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Happy App.app/Happy App";
@@ -436,6 +533,7 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.unalignedbyte.unittests;
+				PRODUCT_MODULE_NAME = UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Happy App.app/Happy App";
@@ -573,6 +671,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.unalignedbyte.happyapp;
+				PRODUCT_MODULE_NAME = HappyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -591,6 +690,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.unalignedbyte.happyapp;
+				PRODUCT_MODULE_NAME = HappyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -1,29 +1,47 @@
 PODS:
+  - Mockingjay (2.0.1):
+    - Mockingjay/Core (= 2.0.1)
+    - Mockingjay/XCTest (= 2.0.1)
+  - Mockingjay/Core (2.0.1):
+    - URITemplate (~> 2.0)
+  - Mockingjay/XCTest (2.0.1):
+    - Mockingjay/Core
+  - RxBlocking (4.1.2):
+    - RxSwift (~> 4.0)
   - RxCocoa (4.1.2):
     - RxSwift (~> 4.0)
   - RxSwift (4.1.2)
   - RxTest (4.1.2):
     - RxSwift (~> 4.0)
   - SwiftLint (0.25.0)
+  - URITemplate (2.0.3)
 
 DEPENDENCIES:
+  - Mockingjay
+  - RxBlocking
   - RxCocoa
   - RxTest
   - SwiftLint
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Mockingjay
+    - RxBlocking
     - RxCocoa
     - RxSwift
     - RxTest
     - SwiftLint
+    - URITemplate
 
 SPEC CHECKSUMS:
+  Mockingjay: 11a621880d2887f1775bdcf824341eb68f218450
+  RxBlocking: f6054985901412fc8c02daa84e92d4ba68c61389
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   RxTest: e634f15fd2c2cd0e0120132ef7a4f7be69ad0393
   SwiftLint: e14651157288e9e01d6e1a71db7014fb5744a8ea
+  URITemplate: ace0c4c46dcf8afe6e89b4060621852886b15c3b
 
-PODFILE CHECKSUM: 4d813d969a79835dda744d6583c4bfa99551e2c7
+PODFILE CHECKSUM: 66b6ff740b70f8478a15cfe491c41a7a4af87ee6
 
 COCOAPODS: 1.5.3
