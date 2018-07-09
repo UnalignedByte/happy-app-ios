@@ -13,12 +13,12 @@ protocol DataFetcherProtocol {
 }
 
 class DataFetcher {
-    var happinessStatusUrl: URL?
+    var webApi: WebApiProtocol?
 }
 
 extension DataFetcher: DataFetcherProtocol {
     func fetchHappinessStatusJsonData() -> Observable<Result<Data>> {
-        guard let url = happinessStatusUrl else {
+        guard let url = webApi?.happinessStatusUrl else {
             return Observable.just(.failure)
         }
         return Observable.create { observer in

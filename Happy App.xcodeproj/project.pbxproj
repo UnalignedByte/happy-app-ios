@@ -26,6 +26,7 @@
 		B5CD81B720EE7418009E0AD9 /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD81B620EE7418009E0AD9 /* DataManagerTests.swift */; };
 		B5CD81BA20EE7766009E0AD9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD81B920EE7766009E0AD9 /* DataManager.swift */; };
 		B5CD81BC20EE77A2009E0AD9 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD81BB20EE77A2009E0AD9 /* Result.swift */; };
+		B5E6456720F3C03900849EB7 /* WebApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E6456620F3C03900849EB7 /* WebApi.swift */; };
 		B5ED4B172091D165004FCD01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ED4B162091D165004FCD01 /* AppDelegate.swift */; };
 		B5ED4B1E2091D166004FCD01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5ED4B1D2091D166004FCD01 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		B5CD81B620EE7418009E0AD9 /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
 		B5CD81B920EE7766009E0AD9 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		B5CD81BB20EE77A2009E0AD9 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		B5E6456620F3C03900849EB7 /* WebApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApi.swift; sourceTree = "<group>"; };
 		B5ED4B132091D165004FCD01 /* Happy App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happy App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5ED4B162091D165004FCD01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5ED4B1D2091D166004FCD01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			children = (
 				B593A22720F170420010BE53 /* HappinessStatus.swift */,
 				B5034D7620F2B8D40053B9EC /* HappinessSubmission.swift */,
+				B5E6456620F3C03900849EB7 /* WebApi.swift */,
 				B593A21F20F1640A0010BE53 /* DataFetcher.swift */,
 				B593A22D20F177A10010BE53 /* DataPusher.swift */,
 				B5CD81B920EE7766009E0AD9 /* DataManager.swift */,
@@ -416,14 +419,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Unit Tests/Pods-Unit Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Mockingjay/Mockingjay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+				"${BUILT_PRODUCTS_DIR}/URITemplate/URITemplate.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mockingjay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/URITemplate.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -472,6 +479,7 @@
 				B56AC50A20C32CD300111D65 /* main.swift in Sources */,
 				B593A22E20F177A10010BE53 /* DataPusher.swift in Sources */,
 				B593A22020F1640A0010BE53 /* DataFetcher.swift in Sources */,
+				B5E6456720F3C03900849EB7 /* WebApi.swift in Sources */,
 				B5CD81BA20EE7766009E0AD9 /* DataManager.swift in Sources */,
 				B5ED4B172091D165004FCD01 /* AppDelegate.swift in Sources */,
 			);
