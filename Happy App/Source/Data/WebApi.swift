@@ -10,6 +10,7 @@ import Foundation
 
 protocol WebApiProtocol {
     var happinessStatusUrl: URL { get }
+    var happinessSubmissionUrl: URL { get }
 }
 
 struct WebApi {
@@ -17,4 +18,5 @@ struct WebApi {
 
 extension WebApi: WebApiProtocol {
     var happinessStatusUrl: URL { return URL(string: "https://unalignedbyte.com/api/happiness")! }
+    var happinessSubmissionUrl: URL { return URL(string: "https://unalignedbyte.com/api/happiness")! }
 }
