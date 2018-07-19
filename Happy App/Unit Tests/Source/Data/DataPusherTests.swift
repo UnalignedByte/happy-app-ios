@@ -20,12 +20,10 @@ class DataPusherTests: XCTestCase {
         scheduler = ConcurrentDispatchQueueScheduler(qos: .default)
     }
 
-    func testPushHappinessStatusWithoutUrl() {
+    func testPushHappinessStatusWithoutWebApi() throws {
         let dataPusher = DataPusher()
-
         let observable = dataPusher.push(happinessSubmissionJsonData: Data()).subscribeOn(scheduler)
-        let result = try? observable.toBlocking().first()
-
+        let result = try observable.toBlocking().first()
         XCTAssertEqual(result, .failure)
     }
 }
