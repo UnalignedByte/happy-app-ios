@@ -27,6 +27,8 @@
 		B5A7DC0A210141DC00A1338F /* UserManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A7DC09210141DC00A1338F /* UserManagerTests.swift */; };
 		B5A7DC0C210142E300A1338F /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A7DC0B210142E300A1338F /* UserManager.swift */; };
 		B5A7DC0E2101600500A1338F /* MockInvalidDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A7DC0D2101600500A1338F /* MockInvalidDataManager.swift */; };
+		B5A7DC10210163B000A1338F /* MockDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A7DC0F210163B000A1338F /* MockDataManager.swift */; };
+		B5A7DC122101795000A1338F /* None.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A7DC112101795000A1338F /* None.swift */; };
 		B5CD81B720EE7418009E0AD9 /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD81B620EE7418009E0AD9 /* DataManagerTests.swift */; };
 		B5CD81BA20EE7766009E0AD9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD81B920EE7766009E0AD9 /* DataManager.swift */; };
 		B5CD81BC20EE77A2009E0AD9 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD81BB20EE77A2009E0AD9 /* Result.swift */; };
@@ -70,6 +72,8 @@
 		B5A7DC09210141DC00A1338F /* UserManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagerTests.swift; sourceTree = "<group>"; };
 		B5A7DC0B210142E300A1338F /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		B5A7DC0D2101600500A1338F /* MockInvalidDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInvalidDataManager.swift; sourceTree = "<group>"; };
+		B5A7DC0F210163B000A1338F /* MockDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataManager.swift; sourceTree = "<group>"; };
+		B5A7DC112101795000A1338F /* None.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = None.swift; sourceTree = "<group>"; };
 		B5CD81B220EE7352009E0AD9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B5CD81B620EE7418009E0AD9 /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
 		B5CD81B920EE7766009E0AD9 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 				B5ED4B162091D165004FCD01 /* AppDelegate.swift */,
 				B56AC50B20C32D7700111D65 /* UnitTestsAppDelegate.swift */,
 				B5CD81BB20EE77A2009E0AD9 /* Result.swift */,
+				B5A7DC112101795000A1338F /* None.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				B5034D7820F2B9A30053B9EC /* MockDataPusherInvalid.swift */,
 				B5034D7A20F2BA9C0053B9EC /* MockDataPusher.swift */,
 				B5A7DC0D2101600500A1338F /* MockInvalidDataManager.swift */,
+				B5A7DC0F210163B000A1338F /* MockDataManager.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -475,6 +481,7 @@
 				B593A22620F169410010BE53 /* MockDataFetcher.swift in Sources */,
 				B5034D7520F2B5BE0053B9EC /* DataPusherTests.swift in Sources */,
 				B5CD81B720EE7418009E0AD9 /* DataManagerTests.swift in Sources */,
+				B5A7DC10210163B000A1338F /* MockDataManager.swift in Sources */,
 				B5A7DC0E2101600500A1338F /* MockInvalidDataManager.swift in Sources */,
 				B5034D7920F2B9A30053B9EC /* MockDataPusherInvalid.swift in Sources */,
 				B593A22220F164300010BE53 /* DataFetcherTests.swift in Sources */,
@@ -492,6 +499,7 @@
 				B5034D7720F2B8D40053B9EC /* HappinessSubmission.swift in Sources */,
 				B5CD81BC20EE77A2009E0AD9 /* Result.swift in Sources */,
 				B56AC50A20C32CD300111D65 /* main.swift in Sources */,
+				B5A7DC122101795000A1338F /* None.swift in Sources */,
 				B593A22E20F177A10010BE53 /* DataPusher.swift in Sources */,
 				B593A22020F1640A0010BE53 /* DataFetcher.swift in Sources */,
 				B5E6456720F3C03900849EB7 /* WebApi.swift in Sources */,

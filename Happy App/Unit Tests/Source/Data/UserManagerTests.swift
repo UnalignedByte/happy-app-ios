@@ -27,11 +27,14 @@ class UserManagerTests: XCTestCase {
         XCTAssertEqual(result, Result<Bool>.failure)
     }
 
-    func testCanSubmitWithInvalidDataManager() throws {
+    func testCanSubmitWithDataManager() throws {
         let userManager = UserManager()
-        userManager.dataManager = MockInvalidDataManager()
+        userManager.dataManager = MockDataManager()
         let observable = userManager.canSubmit.subscribeOn(scheduler)
         let result = try observable.toBlocking().first()
-        XCTAssertEqual(result, Result.failure)
+        XCTAssertEqual(result, .success(true))
+        _ = userManager.submit(happinessLevel: 1)
+        let result2 = try observable.toBlocking().first()
+        XCTAssertEqual(result2, .success(false))
     }
 }

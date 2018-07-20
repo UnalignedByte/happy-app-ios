@@ -41,7 +41,7 @@ class DataManagerTests: XCTestCase {
         dataManager.dataFetcher = MockDataFetcher()
         let observable = dataManager.fetchHappinessStatus().subscribeOn(scheduler)
         let result = try observable.toBlocking().first()
-        XCTAssertEqual(result, Result<HappinessStatus>.success(HappinessStatus()))
+        XCTAssertNotEqual(result, Result<HappinessStatus>.failure)
     }
 
     func testFetchHappinessStatusData() throws {
@@ -61,7 +61,7 @@ class DataManagerTests: XCTestCase {
         let dataManager = DataManager()
         let observable = dataManager.push(happinessSubmission: HappinessSubmission()).subscribeOn(scheduler)
         let result = try observable.toBlocking().first()
-        XCTAssertEqual(result, Result<Void>.failure)
+        XCTAssertEqual(result, Result<None>.failure)
     }
 
     func testPushHappinessSubmissionWithInvalidDataPusher() throws {
@@ -69,7 +69,7 @@ class DataManagerTests: XCTestCase {
         dataManager.dataPusher = MockDataPusherInvalid()
         let observable = dataManager.push(happinessSubmission: HappinessSubmission()).subscribeOn(scheduler)
         let result = try observable.toBlocking().first()
-        XCTAssertEqual(result, Result<Void>.failure)
+        XCTAssertEqual(result, Result<None>.failure)
     }
 
     func testPushHappinessSubmissionWithDataPusher() throws {
@@ -77,6 +77,6 @@ class DataManagerTests: XCTestCase {
         dataManager.dataPusher = MockDataPusher()
         let observable = dataManager.push(happinessSubmission: HappinessSubmission()).subscribeOn(scheduler)
         let result = try observable.toBlocking().first()
-        XCTAssertEqual(result, Result<Void>.success(()))
+        XCTAssertEqual(result, Result<None>.success(None()))
     }
 }

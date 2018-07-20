@@ -9,7 +9,7 @@
 import RxSwift
 
 protocol DataPusherProtocol {
-    func push(happinessSubmissionJsonData: Data) -> Observable<Result<Void>>
+    func push(happinessSubmissionJsonData: Data) -> Observable<Result<None>>
 }
 
 class DataPusher {
@@ -17,7 +17,7 @@ class DataPusher {
 }
 
 extension DataPusher: DataPusherProtocol {
-    func push(happinessSubmissionJsonData: Data) -> Observable<Result<Void>> {
+    func push(happinessSubmissionJsonData: Data) -> Observable<Result<None>> {
         guard let url = webApi?.happinessSubmissionUrl else {
             return Observable.just(.failure)
         }
@@ -26,7 +26,7 @@ extension DataPusher: DataPusherProtocol {
                 (data: Data?, response: URLResponse?, error: Error?) in
                 let statusCode = (response as? HTTPURLResponse)?.statusCode
                 if statusCode == 200 {
-                    observable.onNext(.success(()))
+                    observable.onNext(.success(None()))
                 } else {
                     observable.onNext(.failure)
                 }

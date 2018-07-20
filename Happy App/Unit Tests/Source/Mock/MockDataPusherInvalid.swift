@@ -13,7 +13,7 @@ class MockDataPusherInvalid {
 }
 
 extension MockDataPusherInvalid: DataPusherProtocol {
-    func push(happinessSubmissionJsonData: Data) -> Observable<Result<Void>> {
+    func push(happinessSubmissionJsonData: Data) -> Observable<Result<None>> {
         return Observable.just(.failure)
     }
 }

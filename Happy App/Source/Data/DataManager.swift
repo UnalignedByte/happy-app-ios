@@ -10,7 +10,7 @@ import RxSwift
 
 protocol DataManagerProtocol {
     func fetchHappinessStatus() -> Observable<Result<HappinessStatus>>
-    func push(happinessSubmission: HappinessSubmission) -> Observable<Result<Void>>
+    func push(happinessSubmission: HappinessSubmission) -> Observable<Result<None>>
 }
 
 class DataManager {
@@ -38,7 +38,7 @@ extension DataManager: DataManagerProtocol {
         }
     }
 
-    func push(happinessSubmission: HappinessSubmission) -> Observable<Result<Void>> {
+    func push(happinessSubmission: HappinessSubmission) -> Observable<Result<None>> {
         guard let dataPusher = dataPusher else {
             return Observable.just(.failure)
         }
@@ -52,7 +52,7 @@ extension DataManager: DataManagerProtocol {
         .map { result in
             switch result {
             case .success:
-                return .success(())
+                return .success(None())
             case .failure:
                 return .failure
             }

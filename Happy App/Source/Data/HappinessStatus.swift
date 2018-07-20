@@ -15,3 +15,6 @@ struct HappinessStatus {
 
 extension HappinessStatus: Codable {
 }
+
+extension HappinessStatus: Equatable {
+}

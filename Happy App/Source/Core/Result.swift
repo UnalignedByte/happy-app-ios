@@ -20,11 +20,11 @@ enum Result<T> {
     }
 }
 
-extension Result: Equatable {
-    static func ==<T> (lhs: Result<T>, rhs: Result<T>) -> Bool {
+extension Result: Equatable where T: Equatable {
+    static func == (lhs: Result<T>, rhs: Result<T>) -> Bool {
         switch (lhs, rhs) {
-        case (.success, .success):
-            return true
+        case (.success(let lhsv), .success(let rhsv)):
+                return lhsv == rhsv
         case (.failure, .failure):
             return true
         default:

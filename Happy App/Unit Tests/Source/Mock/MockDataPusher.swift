@@ -13,7 +13,7 @@ class MockDataPusher {
 }
 
 extension MockDataPusher: DataPusherProtocol {
-    func push(happinessSubmissionJsonData: Data) -> Observable<Result<Void>> {
-        return Observable.just(.success(()))
+    func push(happinessSubmissionJsonData: Data) -> Observable<Result<None>> {
+        return Observable.just(.success(None()))
     }
 }

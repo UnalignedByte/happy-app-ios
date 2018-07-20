@@ -1,5 +1,5 @@
 //
-//  MockInvalidDataManager.swift
+//  MockDataManager.swift
 //  Unit Tests
 //
 //  Created by Rafal Grodzinski on 20/07/2018.
@@ -9,12 +9,12 @@
 @testable import HappyApp
 import RxSwift
 
-class MockInvalidDataManager: DataManagerProtocol {
+class MockDataManager: DataManagerProtocol {
     func fetchHappinessStatus() -> Observable<Result<HappinessStatus>> {
-        return Observable.just(.failure)
+        return Observable.just(.success(HappinessStatus(overallPercentage: 86, submissionsCount: 102)))
     }
 
     func push(happinessSubmission: HappinessSubmission) -> Observable<Result<None>> {
-        return Observable.just(.failure)
+        return Observable.just(.success(None()))
     }
 }
