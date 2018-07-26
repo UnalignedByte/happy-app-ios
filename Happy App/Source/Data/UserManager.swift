@@ -10,23 +10,42 @@ import RxSwift
 
 protocol UserManagerProtocol {
     var canSubmit: Observable<Result<Bool>> { get }
+
+    @discardableResult
     func submit(happinessLevel: Int) -> Observable<Result<None>>
 }
 
 class UserManager: UserManagerProtocol {
     var dataManager: DataManagerProtocol?
-    private var hasSubmited = Variable(false)
+    var timeManager: TimeManagerProtocol?
+    var persistenceManager: PersistenceManagerProtocol?
+    let disposeBag = DisposeBag()
 
     var canSubmit: Observable<Result<Bool>> {
-        guard let _ = dataManager else {
+        guard let timeManager = timeManager, let persistenceManager = persistenceManager else {
             return Observable.just(.failure)
         }
 
-        return hasSubmited.asObservable().map { .success(!$0) }
+        return persistenceManager.latestSubmissionDate
+            .map { (dateResult: Result<Date>) -> Observable<Result<Bool>> in
+                if let date = dateResult.value {
+                    return timeManager.isDayElapsed(since: date)
+                } else {
+                    return Observable.just(.success(true))
+                }
+            }.switchLatest()
     }
 
+    @discardableResult
     func submit(happinessLevel: Int) -> Observable<Result<None>> {
-        hasSubmited.value = true
-        return Observable.just(.failure)
+        guard let dataManager = dataManager, let persistenceManager = persistenceManager else {
+            return Observable.just(.failure)
+        }
+
+        let submission = HappinessSubmission()
+
+        let submissionStatus = dataManager.push(happinessSubmission: submission)
+        submissionStatus.subscribe { persistenceManager.save(submissionDate: Date()) }.disposed(by: disposeBag)
+        return submissionStatus
     }
 }
