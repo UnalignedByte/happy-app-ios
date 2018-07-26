@@ -225,8 +225,8 @@
 				B593A22120F164300010BE53 /* DataFetcherTests.swift */,
 				B593A22B20F1769C0010BE53 /* DataPusherTests.swift */,
 				B5CD81B620EE7418009E0AD9 /* DataManagerTests.swift */,
-				B5A7DC09210141DC00A1338F /* UserManagerTests.swift */,
 				B5F52E9221087B3100F85B54 /* TimeManagerTests.swift */,
+				B5A7DC09210141DC00A1338F /* UserManagerTests.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -234,16 +234,14 @@
 		B5CD81B820EE7755009E0AD9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				B593A22720F170420010BE53 /* HappinessStatus.swift */,
-				B5034D7620F2B8D40053B9EC /* HappinessSubmission.swift */,
-				B5F52E9C210A7C3600F85B54 /* UserLogin.swift */,
+				B5F52E9E210A8AEA00F85B54 /* Entities */,
 				B5E6456620F3C03900849EB7 /* WebApi.swift */,
 				B593A21F20F1640A0010BE53 /* DataFetcher.swift */,
 				B593A22D20F177A10010BE53 /* DataPusher.swift */,
 				B5CD81B920EE7766009E0AD9 /* DataManager.swift */,
-				B5A7DC0B210142E300A1338F /* UserManager.swift */,
 				B5F52E9421087CB800F85B54 /* TimeManager.swift */,
 				B5F52E962109112700F85B54 /* PersistenceManager.swift */,
+				B5A7DC0B210142E300A1338F /* UserManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -277,6 +275,16 @@
 				B56AC50020C32BD200111D65 /* Unit Tests */,
 			);
 			path = "Happy App";
+			sourceTree = "<group>";
+		};
+		B5F52E9E210A8AEA00F85B54 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B593A22720F170420010BE53 /* HappinessStatus.swift */,
+				B5034D7620F2B8D40053B9EC /* HappinessSubmission.swift */,
+				B5F52E9C210A7C3600F85B54 /* UserLogin.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		EBF224CFD79B834C85EECC4E /* Frameworks */ = {
