@@ -40,6 +40,7 @@
 		B5F52E972109112700F85B54 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F52E962109112700F85B54 /* PersistenceManager.swift */; };
 		B5F52E9921092A5C00F85B54 /* MockTimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F52E9821092A5C00F85B54 /* MockTimeManager.swift */; };
 		B5F52E9B21092ABB00F85B54 /* MockPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F52E9A21092ABB00F85B54 /* MockPersistenceManager.swift */; };
+		B5F52E9D210A7C3600F85B54 /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F52E9C210A7C3600F85B54 /* UserLogin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		B5F52E962109112700F85B54 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		B5F52E9821092A5C00F85B54 /* MockTimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTimeManager.swift; sourceTree = "<group>"; };
 		B5F52E9A21092ABB00F85B54 /* MockPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPersistenceManager.swift; sourceTree = "<group>"; };
+		B5F52E9C210A7C3600F85B54 /* UserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
 		C0D65A52FCEA28164AE243E9 /* Pods-Happy App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happy App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Happy App/Pods-Happy App.release.xcconfig"; sourceTree = "<group>"; };
 		C74301E44E4F3D21DD3F2320 /* Pods-Unit Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unit Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Unit Tests/Pods-Unit Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -234,6 +236,7 @@
 			children = (
 				B593A22720F170420010BE53 /* HappinessStatus.swift */,
 				B5034D7620F2B8D40053B9EC /* HappinessSubmission.swift */,
+				B5F52E9C210A7C3600F85B54 /* UserLogin.swift */,
 				B5E6456620F3C03900849EB7 /* WebApi.swift */,
 				B593A21F20F1640A0010BE53 /* DataFetcher.swift */,
 				B593A22D20F177A10010BE53 /* DataPusher.swift */,
@@ -523,6 +526,7 @@
 				B5F52E9521087CB800F85B54 /* TimeManager.swift in Sources */,
 				B593A22020F1640A0010BE53 /* DataFetcher.swift in Sources */,
 				B5E6456720F3C03900849EB7 /* WebApi.swift in Sources */,
+				B5F52E9D210A7C3600F85B54 /* UserLogin.swift in Sources */,
 				B5CD81BA20EE7766009E0AD9 /* DataManager.swift in Sources */,
 				B5A7DC0C210142E300A1338F /* UserManager.swift in Sources */,
 				B5ED4B172091D165004FCD01 /* AppDelegate.swift in Sources */,

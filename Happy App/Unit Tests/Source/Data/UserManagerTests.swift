@@ -35,11 +35,32 @@ class UserManagerTests: XCTestCase {
         let observable = userManager.canSubmit.subscribeOn(scheduler)
 
         let result1 = try observable.toBlocking().first()
-        XCTAssertEqual(result1, .success(true))
+        XCTAssertEqual(result1, .success(false))
+
+        userManager.logIn()
+
+        let result2 = try observable.toBlocking().first()
+        XCTAssertEqual(result2, .success(true))
 
         userManager.submit(happinessLevel: 1)
 
+        let result3 = try observable.toBlocking().first()
+        XCTAssertEqual(result3, .success(false))
+    }
+
+    func testLogIn() throws {
+        let userManager = UserManager()
+        userManager.dataManager = MockDataManager()
+        userManager.timeManager = MockTimeManager()
+        userManager.persistenceManager = MockPersistenceManager()
+        let observable = userManager.isLoggedIn.subscribeOn(scheduler)
+
+        let result1 = try observable.toBlocking().first()
+        XCTAssertEqual(result1, .success(false))
+
+        userManager.logIn()
+
         let result2 = try observable.toBlocking().first()
-        XCTAssertEqual(result2, .success(false))
+        XCTAssertEqual(result2, .success(true))
     }
 }

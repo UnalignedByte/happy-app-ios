@@ -11,6 +11,7 @@ import RxSwift
 protocol DataManagerProtocol {
     func fetchHappinessStatus() -> Observable<Result<HappinessStatus>>
     func push(happinessSubmission: HappinessSubmission) -> Observable<Result<None>>
+    func push(userLogin: UserLogin) -> Observable<Result<None>>
 }
 
 class DataManager {
@@ -57,5 +58,9 @@ extension DataManager: DataManagerProtocol {
                 return .failure
             }
         }
+    }
+
+    func push(userLogin: UserLogin) -> Observable<Result<None>> {
+        return Observable.just(.failure)
     }
 }

@@ -17,4 +17,8 @@ class MockDataManager: DataManagerProtocol {
     func push(happinessSubmission: HappinessSubmission) -> Observable<Result<None>> {
         return Observable.just(.success(None()))
     }
+
+    func push(userLogin: UserLogin) -> Observable<Result<None>> {
+        return Observable.just(.success(None()))
+    }
 }

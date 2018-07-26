@@ -14,7 +14,7 @@ protocol TimeManagerProtocol {
 
 class TimeManager {
     private var oneDayInterval: TimeInterval {
-        return 1.0
+        return 60.0 * 60.0 * 24.0 // seconds * minutes * hours
     }
 }
 
