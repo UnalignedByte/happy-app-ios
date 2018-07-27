@@ -23,22 +23,20 @@ class DataFetcherTests: XCTestCase {
                            builder: jsonData(happinessStatusJsonData))
     }
 
-    func testFetchHappinessStatusNoWebApi() {
+    func testFetchHappinessStatusWithoutWebApi() throws {
         let dataFetcher = DataFetcher()
-
         let observable = dataFetcher.fetchHappinessStatusJsonData().subscribeOn(scheduler)
-        let result = try? observable.toBlocking().first()
-
+        let result = try observable.toBlocking().first()
         XCTAssertEqual(result, .failure)
     }
 
-    func testFetchHappinessStatusData() {
+    func testFetchHappinessStatusData() throws {
         let dataFetcher = DataFetcher()
         dataFetcher.webApi = WebApi()
 
         let observable = dataFetcher.fetchHappinessStatusJsonData().subscribeOn(scheduler)
-        let result = try? observable.toBlocking().first()
-        guard let count = result??.value?.count else {
+        let result = try observable.toBlocking().first()
+        guard let count = result?.value?.count else {
             XCTFail("No data has been fetched")
             return
         }
@@ -46,6 +44,7 @@ class DataFetcherTests: XCTestCase {
         XCTAssertGreaterThan(count, 0)
     }
 
+    // MARK: - Private
     private var happinessStatusJsonData: Data {
         guard let fileUrl = Bundle(for: MockDataFetcher.self)
             .url(forResource: "happiness_status", withExtension: "json") else { fatalError() }

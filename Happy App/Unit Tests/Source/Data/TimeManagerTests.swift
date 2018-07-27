@@ -1,8 +1,8 @@
 //
-//  DataPusherTests.swift
+//  TimeManagerTests.swift
 //  Unit Tests
 //
-//  Created by Rafal Grodzinski on 07/07/2018.
+//  Created by Rafal Grodzinski on 25/07/2018.
 //  Copyright © 2018 UnalignedByte. All rights reserved.
 //
 
@@ -12,7 +12,7 @@ import RxTest
 import RxBlocking
 import RxSwift
 
-class DataPusherTests: XCTestCase {
+class TimeManagerTests: XCTestCase {
     var scheduler: ConcurrentDispatchQueueScheduler!
 
     override func setUp() {
@@ -20,10 +20,10 @@ class DataPusherTests: XCTestCase {
         scheduler = ConcurrentDispatchQueueScheduler(qos: .default)
     }
 
-    func testPushHappinessStatusWithoutWebApi() throws {
-        let dataPusher = DataPusher()
-        let observable = dataPusher.push(happinessSubmissionJsonData: Data()).subscribeOn(scheduler)
+    func testIsDayElapsedSinceNow() throws {
+        let timeManager = TimeManager()
+        let observable = timeManager.isDayElapsed(since: Date()).subscribeOn(scheduler)
         let result = try observable.toBlocking().first()
-        XCTAssertEqual(result, .failure)
+        XCTAssertEqual(result, .success(false))
     }
 }
