@@ -29,7 +29,7 @@ extension UserManager: UserManagerProtocol {
             return Observable.just(.failure)
         }
 
-        return Observable.combineLatest(isLoggedIn, persistenceManager.latestSubmissionDate) {
+        return Observable.combineLatest(isLoggedIn, persistenceManager.submissionDate) {
             (isLoggedInResult, dateResult) -> Observable<Result<Bool>> in
             guard let isLoggedIn = isLoggedInResult.value else {
                 return Observable.just(.failure)

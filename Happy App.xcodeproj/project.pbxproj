@@ -35,6 +35,7 @@
 		B5E6456720F3C03900849EB7 /* WebApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E6456620F3C03900849EB7 /* WebApi.swift */; };
 		B5ED4B172091D165004FCD01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ED4B162091D165004FCD01 /* AppDelegate.swift */; };
 		B5ED4B1E2091D166004FCD01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5ED4B1D2091D166004FCD01 /* Assets.xcassets */; };
+		B5EE3089210F417500DED2CF /* PersistenceManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EE3088210F417500DED2CF /* PersistenceManagerTests.swift */; };
 		B5F52E9321087B3100F85B54 /* TimeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F52E9221087B3100F85B54 /* TimeManagerTests.swift */; };
 		B5F52E9521087CB800F85B54 /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F52E9421087CB800F85B54 /* TimeManager.swift */; };
 		B5F52E972109112700F85B54 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F52E962109112700F85B54 /* PersistenceManager.swift */; };
@@ -89,6 +90,7 @@
 		B5ED4B162091D165004FCD01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5ED4B1D2091D166004FCD01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5ED4B222091D166004FCD01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5EE3088210F417500DED2CF /* PersistenceManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManagerTests.swift; sourceTree = "<group>"; };
 		B5F52E9221087B3100F85B54 /* TimeManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeManagerTests.swift; sourceTree = "<group>"; };
 		B5F52E9421087CB800F85B54 /* TimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
 		B5F52E962109112700F85B54 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				B5CD81B620EE7418009E0AD9 /* DataManagerTests.swift */,
 				B5F52E9221087B3100F85B54 /* TimeManagerTests.swift */,
 				B5A7DC09210141DC00A1338F /* UserManagerTests.swift */,
+				B5EE3088210F417500DED2CF /* PersistenceManagerTests.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				B5A7DC10210163B000A1338F /* MockDataManager.swift in Sources */,
 				B5A7DC0E2101600500A1338F /* MockInvalidDataManager.swift in Sources */,
 				B5034D7920F2B9A30053B9EC /* MockInvalidDataPusher.swift in Sources */,
+				B5EE3089210F417500DED2CF /* PersistenceManagerTests.swift in Sources */,
 				B5F52E9921092A5C00F85B54 /* MockTimeManager.swift in Sources */,
 				B593A22220F164300010BE53 /* DataFetcherTests.swift in Sources */,
 				B5034D7B20F2BA9C0053B9EC /* MockDataPusher.swift in Sources */,
