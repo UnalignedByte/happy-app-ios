@@ -1,5 +1,5 @@
 //
-//  MockDataPusherInvalid.swift
+//  MockInvalidDataPusher.swift
 //  Unit Tests
 //
 //  Created by Rafal Grodzinski on 08/07/2018.
@@ -9,10 +9,7 @@
 @testable import HappyApp
 import RxSwift
 
-class MockDataPusherInvalid {
-}
-
-extension MockDataPusherInvalid: DataPusherProtocol {
+class MockInvalidDataPusher: DataPusherProtocol {
     func push(happinessSubmissionJsonData: Data) -> Observable<Result<None>> {
         return Observable.just(.failure)
     }

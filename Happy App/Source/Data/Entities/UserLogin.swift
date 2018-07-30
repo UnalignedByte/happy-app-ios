@@ -9,7 +9,15 @@
 import Foundation
 
 struct UserLogin {
+    let key: String
+
+    init(key: String) {
+        self.key = key
+    }
 }
 
 extension UserLogin: Codable {
+}
+
+extension UserLogin: Equatable {
 }

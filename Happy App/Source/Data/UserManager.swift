@@ -11,25 +11,25 @@ import RxSwift
 protocol UserManagerProtocol {
     var canSubmit: Observable<Result<Bool>> { get }
     var isLoggedIn: Observable<Result<Bool>> { get }
-
-    @discardableResult
-    func submit(happinessLevel: Int) -> Observable<Result<None>>
+    @discardableResult func submit(happinessLevel: Int) -> Observable<Result<None>>
     func logIn()
 }
 
-class UserManager: UserManagerProtocol {
+class UserManager {
     var dataManager: DataManagerProtocol?
     var timeManager: TimeManagerProtocol?
     var persistenceManager: PersistenceManagerProtocol?
     private let disposeBag = DisposeBag()
     private let isLoggedInVar = Variable<Bool>(false)
+}
 
+extension UserManager: UserManagerProtocol {
     var canSubmit: Observable<Result<Bool>> {
         guard let timeManager = timeManager, let persistenceManager = persistenceManager else {
             return Observable.just(.failure)
         }
 
-        return Observable.combineLatest(isLoggedIn, persistenceManager.latestSubmissionDate) {
+        return Observable.combineLatest(isLoggedIn, persistenceManager.submissionDate) {
             (isLoggedInResult, dateResult) -> Observable<Result<Bool>> in
             guard let isLoggedIn = isLoggedInResult.value else {
                 return Observable.just(.failure)
@@ -37,10 +37,8 @@ class UserManager: UserManagerProtocol {
 
             if isLoggedIn, let date = dateResult.value {
                 return timeManager.isDayElapsed(since: date)
-            } else if isLoggedIn {
-                return Observable.just(.success(true))
             } else {
-                return Observable.just(.success(false))
+                return Observable.just(.success(isLoggedIn))
             }
         }.switchLatest()
     }
@@ -49,13 +47,12 @@ class UserManager: UserManagerProtocol {
         return isLoggedInVar.asObservable().map { .success($0) }
     }
 
-    @discardableResult
-    func submit(happinessLevel: Int) -> Observable<Result<None>> {
+    @discardableResult func submit(happinessLevel: Int) -> Observable<Result<None>> {
         guard let dataManager = dataManager, let persistenceManager = persistenceManager else {
             return Observable.just(.failure)
         }
 
-        let submission = HappinessSubmission()
+        let submission = HappinessSubmission(happinessLevel: happinessLevel)
 
         let submissionStatus = dataManager.push(happinessSubmission: submission)
         submissionStatus.subscribe(onNext: { _ in
@@ -67,7 +64,7 @@ class UserManager: UserManagerProtocol {
     func logIn() {
         guard let dataManager = dataManager else { return }
 
-        let userLogin = UserLogin()
+        let userLogin = UserLogin(key: "dummy")
 
         let loginStatus = dataManager.push(userLogin: userLogin)
         loginStatus.subscribe(onNext: { result in

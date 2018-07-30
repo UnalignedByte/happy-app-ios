@@ -30,7 +30,7 @@ class DataManagerTests: XCTestCase {
 
     func testFetchHappinessStatusWithInvalidDataFetcher() throws {
         let dataManager = DataManager()
-        dataManager.dataFetcher = MockDataFetcherInvalid()
+        dataManager.dataFetcher = MockInvalidDataFetcher()
         let observable = dataManager.fetchHappinessStatus().subscribeOn(scheduler)
         let result = try observable.toBlocking().first()
         XCTAssertEqual(result, Result<HappinessStatus>.failure)
@@ -59,15 +59,15 @@ class DataManagerTests: XCTestCase {
     // MARK: - Pusher
     func testPushHappinessSubmissionWithoutDataPusher() throws {
         let dataManager = DataManager()
-        let observable = dataManager.push(happinessSubmission: HappinessSubmission()).subscribeOn(scheduler)
+        let observable = dataManager.push(happinessSubmission: HappinessSubmission(happinessLevel: 1)).subscribeOn(scheduler)
         let result = try observable.toBlocking().first()
         XCTAssertEqual(result, Result<None>.failure)
     }
 
     func testPushHappinessSubmissionWithInvalidDataPusher() throws {
         let dataManager = DataManager()
-        dataManager.dataPusher = MockDataPusherInvalid()
-        let observable = dataManager.push(happinessSubmission: HappinessSubmission()).subscribeOn(scheduler)
+        dataManager.dataPusher = MockInvalidDataPusher()
+        let observable = dataManager.push(happinessSubmission: HappinessSubmission(happinessLevel: 1)).subscribeOn(scheduler)
         let result = try observable.toBlocking().first()
         XCTAssertEqual(result, Result<None>.failure)
     }
@@ -75,7 +75,7 @@ class DataManagerTests: XCTestCase {
     func testPushHappinessSubmissionWithDataPusher() throws {
         let dataManager = DataManager()
         dataManager.dataPusher = MockDataPusher()
-        let observable = dataManager.push(happinessSubmission: HappinessSubmission()).subscribeOn(scheduler)
+        let observable = dataManager.push(happinessSubmission: HappinessSubmission(happinessLevel: 1)).subscribeOn(scheduler)
         let result = try observable.toBlocking().first()
         XCTAssertEqual(result, Result<None>.success(None()))
     }

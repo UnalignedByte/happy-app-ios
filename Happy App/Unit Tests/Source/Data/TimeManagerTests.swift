@@ -26,4 +26,17 @@ class TimeManagerTests: XCTestCase {
         let result = try observable.toBlocking().first()
         XCTAssertEqual(result, .success(false))
     }
+
+    func testIsDayElapsedSinceYesterday() throws {
+        let timeManager = TimeManager()
+        let observable = timeManager.isDayElapsed(since: yesterdayDate).subscribeOn(scheduler)
+        let result = try observable.toBlocking().first()
+        XCTAssertEqual(result, .success(true))
+    }
+
+    // MARK: - Private
+    var yesterdayDate: Date {
+        let yesterdayDate = Date(timeIntervalSinceNow: -60.0 * 60.0 * 24.0)
+        return yesterdayDate
+    }
 }

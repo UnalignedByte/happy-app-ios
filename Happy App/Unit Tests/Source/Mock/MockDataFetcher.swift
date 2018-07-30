@@ -9,10 +9,7 @@
 @testable import HappyApp
 import RxSwift
 
-class MockDataFetcher {
-}
-
-extension MockDataFetcher: DataFetcherProtocol {
+class MockDataFetcher: DataFetcherProtocol {
     func fetchHappinessStatusJsonData() -> Observable<Result<Data>> {
         guard let fileUrl = Bundle(for: MockDataFetcher.self)
             .url(forResource: "happiness_status", withExtension: "json") else {

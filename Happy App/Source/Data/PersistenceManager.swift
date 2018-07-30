@@ -9,21 +9,20 @@
 import RxSwift
 
 protocol PersistenceManagerProtocol {
-    var latestSubmissionDate: Observable<Result<Date>> { get }
-
+    var submissionDate: Observable<Result<Date>> { get }
     func save(submissionDate date: Date)
 }
 
 class PersistenceManager {
-    private let submissionDate: Variable<Result<Date>> = Variable(.failure)
+    private let submissionDateVar: Variable<Result<Date>> = Variable(.failure)
 }
 
 extension PersistenceManager: PersistenceManagerProtocol {
-    var latestSubmissionDate: Observable<Result<Date>> {
-        return submissionDate.asObservable()
+    var submissionDate: Observable<Result<Date>> {
+        return submissionDateVar.asObservable()
     }
 
     func save(submissionDate date: Date) {
-        submissionDate.value = .success(date)
+        submissionDateVar.value = .success(date)
     }
 }

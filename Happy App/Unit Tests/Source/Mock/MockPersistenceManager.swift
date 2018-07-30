@@ -10,13 +10,13 @@
 import RxSwift
 
 class MockPersistenceManager: PersistenceManagerProtocol {
-    private let submissionDate = Variable<Result<Date>>(.failure)
+    private let submissionDateVar = Variable<Result<Date>>(.failure)
 
-    var latestSubmissionDate: Observable<Result<Date>> {
-        return submissionDate.asObservable()
+    var submissionDate: Observable<Result<Date>> {
+        return submissionDateVar.asObservable()
     }
 
     func save(submissionDate date: Date) {
-        submissionDate.value = .success(date)
+        submissionDateVar.value = .success(date)
     }
 }

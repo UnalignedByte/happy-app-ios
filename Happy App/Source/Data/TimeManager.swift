@@ -13,15 +13,17 @@ protocol TimeManagerProtocol {
 }
 
 class TimeManager {
-    private var oneDayInterval: TimeInterval {
-        return 60.0 * 60.0 * 24.0 // seconds * minutes * hours
-    }
 }
 
 extension TimeManager: TimeManagerProtocol {
     func isDayElapsed(since date: Date) -> Observable<Result<Bool>> {
-        let oneDayInterval = self.oneDayInterval
         return Observable<Int>.interval(1.0, scheduler: MainScheduler.instance)
-            .map { _ in .success(date.timeIntervalSinceNow >= oneDayInterval) }
+            .map { _ in
+                guard let morningDate = Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: Date()) else {
+                    return .failure
+                }
+                let result = date.compare(morningDate)
+                return .success(result != .orderedDescending)
+        }
     }
 }
