@@ -10,7 +10,6 @@ import RxSwift
 
 protocol PersistenceManagerProtocol {
     var latestSubmissionDate: Observable<Result<Date>> { get }
-
     func save(submissionDate date: Date)
 }
 
