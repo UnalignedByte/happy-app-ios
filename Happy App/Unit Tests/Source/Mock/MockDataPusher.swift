@@ -9,10 +9,7 @@
 @testable import HappyApp
 import RxSwift
 
-class MockDataPusher {
-}
-
-extension MockDataPusher: DataPusherProtocol {
+class MockDataPusher: DataPusherProtocol {
     func push(happinessSubmissionJsonData: Data) -> Observable<Result<None>> {
         return Observable.just(.success(None()))
     }

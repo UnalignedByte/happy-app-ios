@@ -30,7 +30,7 @@ class DataManagerTests: XCTestCase {
 
     func testFetchHappinessStatusWithInvalidDataFetcher() throws {
         let dataManager = DataManager()
-        dataManager.dataFetcher = MockDataFetcherInvalid()
+        dataManager.dataFetcher = MockInvalidDataFetcher()
         let observable = dataManager.fetchHappinessStatus().subscribeOn(scheduler)
         let result = try observable.toBlocking().first()
         XCTAssertEqual(result, Result<HappinessStatus>.failure)
@@ -66,7 +66,7 @@ class DataManagerTests: XCTestCase {
 
     func testPushHappinessSubmissionWithInvalidDataPusher() throws {
         let dataManager = DataManager()
-        dataManager.dataPusher = MockDataPusherInvalid()
+        dataManager.dataPusher = MockInvalidDataPusher()
         let observable = dataManager.push(happinessSubmission: HappinessSubmission(happinessLevel: 1)).subscribeOn(scheduler)
         let result = try observable.toBlocking().first()
         XCTAssertEqual(result, Result<None>.failure)

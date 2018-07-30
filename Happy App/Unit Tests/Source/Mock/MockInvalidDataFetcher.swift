@@ -1,5 +1,5 @@
 //
-//  MockDataFetcherInvalid.swift
+//  MockInvalidDataFetcher.swift
 //  Unit Tests
 //
 //  Created by Rafal Grodzinski on 07/07/2018.
@@ -9,10 +9,7 @@
 @testable import HappyApp
 import RxSwift
 
-class MockDataFetcherInvalid {
-}
-
-extension MockDataFetcherInvalid: DataFetcherProtocol {
+class MockInvalidDataFetcher: DataFetcherProtocol {
     func fetchHappinessStatusJsonData() -> Observable<Result<Data>> {
         return Observable.just(.failure)
     }
