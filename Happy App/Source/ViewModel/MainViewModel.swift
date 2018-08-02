@@ -13,14 +13,19 @@ protocol MainViewModelProtocol {
     var resultsHint: Observable<String> { get }
     var selectionAreaOpacity: Observable<Double> { get }
     var resultsAreaOpacity: Observable<Double> { get }
+
+    func voteButtonPressed(atIndex index: Int)
 }
 
 class MainViewModel {
+    let titleVar = Variable<String>(String.forTranslation(.titleBefore))
+    let selectionAreaOpacityVar = Variable<Double>(1.0)
+    let resultsAreaOpacityVar = Variable<Double>(1.0)
 }
 
 extension MainViewModel: MainViewModelProtocol {
     var title: Observable<String> {
-        return Observable.just(String.forTranslation(.titleBefore))
+        return titleVar.asObservable()
     }
 
     var resultsHint: Observable<String> {
@@ -28,10 +33,16 @@ extension MainViewModel: MainViewModelProtocol {
     }
 
     var selectionAreaOpacity: Observable<Double> {
-        return Observable.just(1.0)
+        return selectionAreaOpacityVar.asObservable()
     }
 
     var resultsAreaOpacity: Observable<Double> {
-        return Observable.just(1.0)
+        return resultsAreaOpacityVar.asObservable()
+    }
+
+    func voteButtonPressed(atIndex index: Int) {
+        titleVar.value = String.forTranslation(.titleWaiting)
+        selectionAreaOpacityVar.value = 0.5
+        resultsAreaOpacityVar.value = 0.5
     }
 }

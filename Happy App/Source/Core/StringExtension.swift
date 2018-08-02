@@ -12,6 +12,7 @@ extension String {
     enum Translation: String {
         case titleBefore = "title_before"
         case resultsHint = "results_hint"
+        case titleWaiting = "title_waiting"
     }
 
     static func forTranslation(_ translation: String.Translation) -> String {
