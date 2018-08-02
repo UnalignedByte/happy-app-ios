@@ -10,3 +10,4 @@
 "results_hint" = "Vote to see today’s results";
 "title_waiting" = "Submitting Your Vote...";
 "title_after" = "Thank you for voting today!";
+"error_submitting" = "There was a problem submitting your vote";

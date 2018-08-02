@@ -60,7 +60,10 @@ extension MainViewModel: MainViewModelProtocol {
                     self?.resultsAreaOpacityVar.value = 1.0
                     self?.resultsHintVar.value = ""
                 } else {
-
+                    self?.titleVar.value = String.forTranslation(.titleErrorSubmitting)
+                    self?.selectionAreaOpacityVar.value = 1.0
+                    self?.resultsAreaOpacityVar.value = 1.0
+                    self?.resultsHintVar.value = String.forTranslation(.resultsHint)
                 }
             }).disposed(by: disposeBag)
     }

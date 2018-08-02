@@ -33,10 +33,11 @@ class MainViewController: UIViewController {
     private func setupSelectionArea() {
         guard let viewModel = viewModel else { fatalError() }
         viewModel.selectionAreaOpacity
+            .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] opacity in
-                UIView.animate(withDuration: 0.5) {
+                UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseInOut, animations: {
                     self?.selectionAreaView.alpha = CGFloat(opacity)
-                }
+                }, completion: nil)
                 self?.selectionAreaView.isUserInteractionEnabled = opacity § 1.0
             }).disposed(by: disposeBag)
 
@@ -53,7 +54,12 @@ class MainViewController: UIViewController {
         viewModel.resultsHint.bind(to: resultsHintLabel.rx.text).disposed(by: disposeBag)
         viewModel.resultsAreaOpacity
             .map { CGFloat($0) }
-            .bind(to: resultsAreaView.rx.alpha).disposed(by: disposeBag)
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] opacity in
+                UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseInOut, animations: {
+                    self?.resultsAreaView.alpha = CGFloat(opacity)
+                }, completion: nil)
+            }).disposed(by: disposeBag)
 
         resultsAreaView.layer.cornerRadius = 24.0
     }
