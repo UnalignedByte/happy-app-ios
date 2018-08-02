@@ -14,17 +14,24 @@ protocol MainViewModelProtocol {
     var selectionAreaOpacity: Observable<Double> { get }
     var resultsAreaOpacity: Observable<Double> { get }
 
+    var resultsOpacity: Observable<Double> { get }
+    var resultYouToday: Observable<String> { get }
+    var resultYouAllTime: Observable<String> { get }
+    var resultWorldToday: Observable<String> { get }
+    var resultWorldAllTime: Observable<String> { get }
+
     func voteButtonPressed(atIndex index: Int)
 }
 
 class MainViewModel {
     var userManager: UserManagerProtocol?
-    
+
     private let disposeBag = DisposeBag()
     private let titleVar = Variable<String>(String.forTranslation(.titleBefore))
     private let resultsHintVar = Variable<String>(String.forTranslation(.resultsHint))
     private let selectionAreaOpacityVar = Variable<Double>(1.0)
     private let resultsAreaOpacityVar = Variable<Double>(1.0)
+    private let resultsOpacityVar = Variable<Double>(0.0)
 }
 
 extension MainViewModel: MainViewModelProtocol {
@@ -44,6 +51,26 @@ extension MainViewModel: MainViewModelProtocol {
         return resultsAreaOpacityVar.asObservable()
     }
 
+    var resultsOpacity: Observable<Double> {
+        return resultsOpacityVar.asObservable()
+    }
+
+    var resultYouToday: Observable<String> {
+        return Observable.just("+50%")
+    }
+
+    var resultYouAllTime: Observable<String> {
+        return Observable.just("-27%")
+    }
+
+    var resultWorldToday: Observable<String> {
+        return Observable.just("+4%")
+    }
+
+    var resultWorldAllTime: Observable<String> {
+        return Observable.just("+14%")
+    }
+
     func voteButtonPressed(atIndex index: Int) {
         titleVar.value = String.forTranslation(.titleWaiting)
         selectionAreaOpacityVar.value = 0.5
@@ -59,6 +86,7 @@ extension MainViewModel: MainViewModelProtocol {
                     self?.selectionAreaOpacityVar.value = 0.0
                     self?.resultsAreaOpacityVar.value = 1.0
                     self?.resultsHintVar.value = ""
+                    self?.resultsOpacityVar.value = 1.0
                 } else {
                     self?.titleVar.value = String.forTranslation(.titleErrorSubmitting)
                     self?.selectionAreaOpacityVar.value = 1.0

@@ -110,12 +110,92 @@
                                                     <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <size key="shadowOffset" width="1" height="1"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXG-4M-sLM">
+                                                    <rect key="frame" x="15.999999999999996" y="66.000000000000057" width="48.666666666666657" height="37"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                                    <color key="textColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSL-sa-F0T">
+                                                    <rect key="frame" x="16" y="111.00000000000006" width="75.333333333333329" height="37"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                                    <color key="textColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0v3-Q1-dXg">
+                                                    <rect key="frame" x="132.66666666666666" y="21" width="77.333333333333343" height="37"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                                    <color key="textColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QU-mh-FDv">
+                                                    <rect key="frame" x="226" y="21" width="101" height="37"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                                    <color key="textColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BN1-Lc-tJn">
+                                                    <rect key="frame" x="136.33333333333334" y="66.000000000000057" width="70" height="37"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                                    <color key="textColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5H-tB-o8Z">
+                                                    <rect key="frame" x="241.66666666666669" y="66.000000000000057" width="70" height="37"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                                    <color key="textColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5b-Zc-HnG">
+                                                    <rect key="frame" x="136.33333333333334" y="111.00000000000006" width="70" height="37"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                                    <color key="textColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cat-lk-W2D">
+                                                    <rect key="frame" x="241.66666666666669" y="111.00000000000006" width="70" height="37"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                                    <color key="textColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="SSL-sa-F0T" firstAttribute="top" secondItem="SXG-4M-sLM" secondAttribute="bottom" constant="8" id="22a-YH-PY8"/>
+                                                <constraint firstItem="n5b-Zc-HnG" firstAttribute="centerX" secondItem="BN1-Lc-tJn" secondAttribute="centerX" id="85j-tS-LlQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="dcm-lj-Gaf" secondAttribute="trailing" id="C4i-Cn-hKh"/>
+                                                <constraint firstItem="n5b-Zc-HnG" firstAttribute="centerY" secondItem="SSL-sa-F0T" secondAttribute="centerY" id="HZG-cn-ROX"/>
                                                 <constraint firstItem="dcm-lj-Gaf" firstAttribute="top" secondItem="gWm-CT-Cjc" secondAttribute="top" id="Lwr-ch-sZw"/>
+                                                <constraint firstAttribute="trailing" secondItem="8QU-mh-FDv" secondAttribute="trailing" constant="16" id="QjW-0I-aM6"/>
+                                                <constraint firstItem="SXG-4M-sLM" firstAttribute="top" secondItem="0v3-Q1-dXg" secondAttribute="bottom" constant="8" id="Ro6-r0-Xj7"/>
+                                                <constraint firstItem="Y5H-tB-o8Z" firstAttribute="centerY" secondItem="SXG-4M-sLM" secondAttribute="centerY" id="VlS-XB-c3q"/>
                                                 <constraint firstAttribute="bottom" secondItem="dcm-lj-Gaf" secondAttribute="bottom" id="cbz-L6-Yeg"/>
+                                                <constraint firstItem="8QU-mh-FDv" firstAttribute="leading" secondItem="0v3-Q1-dXg" secondAttribute="trailing" constant="16" id="e04-jD-mGq"/>
+                                                <constraint firstItem="SXG-4M-sLM" firstAttribute="top" secondItem="8QU-mh-FDv" secondAttribute="bottom" constant="8" id="eVT-VG-RMe"/>
+                                                <constraint firstItem="SXG-4M-sLM" firstAttribute="leading" secondItem="gWm-CT-Cjc" secondAttribute="leading" constant="16" id="ezk-EM-kuW"/>
+                                                <constraint firstAttribute="bottom" secondItem="SSL-sa-F0T" secondAttribute="bottom" constant="24" id="hSP-6O-23R"/>
+                                                <constraint firstItem="SSL-sa-F0T" firstAttribute="leading" secondItem="gWm-CT-Cjc" secondAttribute="leading" constant="16" id="lF1-NU-2EY"/>
+                                                <constraint firstItem="BN1-Lc-tJn" firstAttribute="centerX" secondItem="0v3-Q1-dXg" secondAttribute="centerX" id="qYg-5U-Ytn"/>
+                                                <constraint firstItem="cat-lk-W2D" firstAttribute="centerX" secondItem="Y5H-tB-o8Z" secondAttribute="centerX" id="qe7-9i-ASQ"/>
+                                                <constraint firstItem="BN1-Lc-tJn" firstAttribute="centerY" secondItem="SXG-4M-sLM" secondAttribute="centerY" id="sJC-v1-pQY"/>
                                                 <constraint firstItem="dcm-lj-Gaf" firstAttribute="leading" secondItem="gWm-CT-Cjc" secondAttribute="leading" id="sSt-iu-FZa"/>
+                                                <constraint firstItem="cat-lk-W2D" firstAttribute="centerY" secondItem="SSL-sa-F0T" secondAttribute="centerY" id="uWR-EX-JYh"/>
+                                                <constraint firstItem="Y5H-tB-o8Z" firstAttribute="centerX" secondItem="8QU-mh-FDv" secondAttribute="centerX" id="yvT-Vp-2D2"/>
                                             </constraints>
                                         </view>
                                         <constraints>
@@ -151,14 +231,30 @@
                         <viewLayoutGuide key="safeArea" id="25r-Ev-xLd"/>
                     </view>
                     <connections>
+                        <outlet property="resultWorldAllTimeLabel" destination="cat-lk-W2D" id="vVQ-Iu-rtq"/>
+                        <outlet property="resultWorldTodayLabel" destination="n5b-Zc-HnG" id="lBR-om-ocM"/>
+                        <outlet property="resultYouAllTimeLabel" destination="Y5H-tB-o8Z" id="Pnx-Cr-iOw"/>
+                        <outlet property="resultYouTodayLabel" destination="BN1-Lc-tJn" id="NYV-L0-jLq"/>
+                        <outlet property="resultsAllTimeLabel" destination="8QU-mh-FDv" id="LsK-oh-Whl"/>
                         <outlet property="resultsAreaView" destination="6Eh-b9-dES" id="Ssm-5N-ePe"/>
                         <outlet property="resultsHintLabel" destination="dcm-lj-Gaf" id="OeW-M1-XJW"/>
+                        <outlet property="resultsTodayLabel" destination="0v3-Q1-dXg" id="LWT-R0-huI"/>
+                        <outlet property="resultsWorldLabel" destination="SSL-sa-F0T" id="Swv-cj-sR4"/>
+                        <outlet property="resultsYouLabel" destination="SXG-4M-sLM" id="ZRn-Un-QUx"/>
                         <outlet property="selectionAreaView" destination="aec-JE-E7q" id="8ij-ZP-wwg"/>
                         <outlet property="titleLabel" destination="LBJ-cO-2X1" id="UjT-uX-q8l"/>
                         <outletCollection property="voteButtons" destination="ueb-4d-hdk" collectionClass="NSMutableArray" id="qw6-ff-Jlx"/>
                         <outletCollection property="voteButtons" destination="Mfr-5V-U4O" collectionClass="NSMutableArray" id="HVA-nB-dK3"/>
                         <outletCollection property="voteButtons" destination="hvE-DK-azK" collectionClass="NSMutableArray" id="1LS-NB-M1s"/>
                         <outletCollection property="voteButtons" destination="c9l-tL-FmS" collectionClass="NSMutableArray" id="8Gv-jy-t34"/>
+                        <outletCollection property="resultsLabels" destination="SXG-4M-sLM" collectionClass="NSMutableArray" id="tJi-Re-OHD"/>
+                        <outletCollection property="resultsLabels" destination="SSL-sa-F0T" collectionClass="NSMutableArray" id="Ark-jO-6zW"/>
+                        <outletCollection property="resultsLabels" destination="0v3-Q1-dXg" collectionClass="NSMutableArray" id="hT3-qj-4sA"/>
+                        <outletCollection property="resultsLabels" destination="8QU-mh-FDv" collectionClass="NSMutableArray" id="vXx-tP-4au"/>
+                        <outletCollection property="resultsLabels" destination="BN1-Lc-tJn" collectionClass="NSMutableArray" id="u9k-Gq-BM1"/>
+                        <outletCollection property="resultsLabels" destination="Y5H-tB-o8Z" collectionClass="NSMutableArray" id="33q-tg-J2h"/>
+                        <outletCollection property="resultsLabels" destination="n5b-Zc-HnG" collectionClass="NSMutableArray" id="w9d-U6-6pN"/>
+                        <outletCollection property="resultsLabels" destination="cat-lk-W2D" collectionClass="NSMutableArray" id="WQk-Lw-5eP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XNJ-vu-N9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
