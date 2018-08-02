@@ -33,13 +33,11 @@ class MainViewController: UIViewController {
     private func setupSelectionArea() {
         guard let viewModel = viewModel else { fatalError() }
         viewModel.selectionAreaOpacity
-            .map { CGFloat($0) }
-            .bind(to: selectionAreaView.rx.alpha)
-            .disposed(by: disposeBag)
-
-        viewModel.selectionAreaOpacity
-            .subscribe(onNext: { [weak self] in
-                self?.selectionAreaView.isUserInteractionEnabled = $0 § 1.0
+            .subscribe(onNext: { [weak self] opacity in
+                UIView.animate(withDuration: 0.5) {
+                    self?.selectionAreaView.alpha = CGFloat(opacity)
+                }
+                self?.selectionAreaView.isUserInteractionEnabled = opacity § 1.0
             }).disposed(by: disposeBag)
 
         voteButtons.forEach { button in

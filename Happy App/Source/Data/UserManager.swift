@@ -11,7 +11,7 @@ import RxSwift
 protocol UserManagerProtocol {
     var canSubmit: Observable<Result<Bool>> { get }
     var isLoggedIn: Observable<Result<Bool>> { get }
-    @discardableResult func submit(happinessLevel: Int) -> Observable<Result<None>>
+    @discardableResult func submit(happinessPercentage: Int) -> Observable<Result<None>>
     func logIn()
 }
 
@@ -47,12 +47,12 @@ extension UserManager: UserManagerProtocol {
         return isLoggedInVar.asObservable().map { .success($0) }
     }
 
-    @discardableResult func submit(happinessLevel: Int) -> Observable<Result<None>> {
+    @discardableResult func submit(happinessPercentage: Int) -> Observable<Result<None>> {
         guard let dataManager = dataManager, let persistenceManager = persistenceManager else {
             return Observable.just(.failure)
         }
 
-        let submission = HappinessSubmission(happinessLevel: happinessLevel)
+        let submission = HappinessSubmission(happinessPercentage: happinessPercentage)
 
         let submissionStatus = dataManager.push(happinessSubmission: submission)
         submissionStatus.subscribe(onNext: { _ in

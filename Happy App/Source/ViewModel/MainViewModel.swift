@@ -18,9 +18,13 @@ protocol MainViewModelProtocol {
 }
 
 class MainViewModel {
-    let titleVar = Variable<String>(String.forTranslation(.titleBefore))
-    let selectionAreaOpacityVar = Variable<Double>(1.0)
-    let resultsAreaOpacityVar = Variable<Double>(1.0)
+    var userManager: UserManagerProtocol?
+    
+    private let disposeBag = DisposeBag()
+    private let titleVar = Variable<String>(String.forTranslation(.titleBefore))
+    private let resultsHintVar = Variable<String>(String.forTranslation(.resultsHint))
+    private let selectionAreaOpacityVar = Variable<Double>(1.0)
+    private let resultsAreaOpacityVar = Variable<Double>(1.0)
 }
 
 extension MainViewModel: MainViewModelProtocol {
@@ -29,7 +33,7 @@ extension MainViewModel: MainViewModelProtocol {
     }
 
     var resultsHint: Observable<String> {
-        return Observable.just(String.forTranslation(.resultsHint))
+        return resultsHintVar.asObservable()
     }
 
     var selectionAreaOpacity: Observable<Double> {
@@ -44,5 +48,20 @@ extension MainViewModel: MainViewModelProtocol {
         titleVar.value = String.forTranslation(.titleWaiting)
         selectionAreaOpacityVar.value = 0.5
         resultsAreaOpacityVar.value = 0.5
+
+        let happinessPercentage = index * 25
+
+        guard let userManager = userManager else { fatalError() }
+        userManager.submit(happinessPercentage: happinessPercentage)
+            .subscribe(onNext: { [weak self] result in
+                if result == .success(None()) {
+                    self?.titleVar.value = String.forTranslation(.titleAfter)
+                    self?.selectionAreaOpacityVar.value = 0.0
+                    self?.resultsAreaOpacityVar.value = 1.0
+                    self?.resultsHintVar.value = ""
+                } else {
+
+                }
+            }).disposed(by: disposeBag)
     }
 }
