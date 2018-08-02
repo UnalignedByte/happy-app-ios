@@ -20,6 +20,7 @@
 		B514F5B321134BBB0034F4EA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B514F5B221134BBB0034F4EA /* MainViewController.swift */; };
 		B514F5B521134C030034F4EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B514F5B421134C030034F4EA /* Main.storyboard */; };
 		B514F5B7211379230034F4EA /* StoryboardSwinjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B514F5B6211379230034F4EA /* StoryboardSwinjectExtension.swift */; };
+		B514F5B92113806F0034F4EA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B514F5B82113806F0034F4EA /* Localizable.strings */; };
 		B56AC4FA20C324AE00111D65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56AC4F920C324AE00111D65 /* LaunchScreen.storyboard */; };
 		B56AC50A20C32CD300111D65 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56AC50920C32CD300111D65 /* main.swift */; };
 		B56AC50C20C32D7700111D65 /* UnitTestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56AC50B20C32D7700111D65 /* UnitTestsAppDelegate.swift */; };
@@ -76,6 +77,7 @@
 		B514F5B221134BBB0034F4EA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B514F5B421134C030034F4EA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B514F5B6211379230034F4EA /* StoryboardSwinjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardSwinjectExtension.swift; sourceTree = "<group>"; };
+		B514F5B82113806F0034F4EA /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		B56AC4F920C324AE00111D65 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B56AC4FF20C32BD200111D65 /* Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56AC50320C32BD200111D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			children = (
 				B5ED4B1D2091D166004FCD01 /* Assets.xcassets */,
 				B56AC4F920C324AE00111D65 /* LaunchScreen.storyboard */,
+				B514F5B82113806F0034F4EA /* Localizable.strings */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -412,9 +415,6 @@
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
-			knownRegions = (
-				Base,
-			);
 			mainGroup = B5ED4B0A2091D165004FCD01;
 			productRefGroup = B5ED4B142091D165004FCD01 /* Products */;
 			projectDirPath = "";
@@ -439,6 +439,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B514F5B92113806F0034F4EA /* Localizable.strings in Resources */,
 				B56AC4FA20C324AE00111D65 /* LaunchScreen.storyboard in Resources */,
 				B514F5B521134C030034F4EA /* Main.storyboard in Resources */,
 				B5ED4B1E2091D166004FCD01 /* Assets.xcassets in Resources */,

@@ -31,9 +31,66 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aec-JE-E7q">
                                         <rect key="frame" x="0.0" y="72.000000000000028" width="343" height="60"/>
-                                        <color key="backgroundColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="qMz-hq-u8f">
+                                                <rect key="frame" x="8" y="0.0" width="327" height="60"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueb-4d-hdk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="bzK-lT-QDN"/>
+                                                            <constraint firstAttribute="width" secondItem="ueb-4d-hdk" secondAttribute="height" multiplier="1:1" id="tY4-9o-dty"/>
+                                                        </constraints>
+                                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                                        <state key="normal" image="Button Vote 0">
+                                                            <color key="titleColor" red="0.98823529409999999" green="0.98823529409999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfr-5V-U4O">
+                                                        <rect key="frame" x="89" y="0.0" width="60" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="RgT-gk-xNs"/>
+                                                            <constraint firstAttribute="width" secondItem="Mfr-5V-U4O" secondAttribute="height" multiplier="1:1" id="qEd-D2-vHP"/>
+                                                        </constraints>
+                                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                                        <state key="normal" image="Button Vote 1">
+                                                            <color key="titleColor" red="0.98823529409999999" green="0.98823529409999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvE-DK-azK">
+                                                        <rect key="frame" x="178" y="0.0" width="60" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="hvE-DK-azK" secondAttribute="height" multiplier="1:1" id="bTK-um-k6O"/>
+                                                            <constraint firstAttribute="height" constant="60" id="rHq-I3-kay"/>
+                                                        </constraints>
+                                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                                        <state key="normal" image="Button Vote 2">
+                                                            <color key="titleColor" red="0.98823529409999999" green="0.98823529409999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9l-tL-FmS">
+                                                        <rect key="frame" x="267" y="0.0" width="60" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="cmr-C8-zo7"/>
+                                                            <constraint firstAttribute="width" secondItem="c9l-tL-FmS" secondAttribute="height" multiplier="1:1" id="zXD-4Z-hoq"/>
+                                                        </constraints>
+                                                        <size key="titleShadowOffset" width="1" height="1"/>
+                                                        <state key="normal" image="Button Vote 3">
+                                                            <color key="titleColor" red="0.98823529409999999" green="0.98823529409999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="q3s-ga-DTu"/>
+                                            <constraint firstItem="qMz-hq-u8f" firstAttribute="top" secondItem="aec-JE-E7q" secondAttribute="top" id="Frt-Yo-AeY"/>
+                                            <constraint firstItem="qMz-hq-u8f" firstAttribute="leading" secondItem="aec-JE-E7q" secondAttribute="leading" constant="8" id="Ume-Tj-579"/>
+                                            <constraint firstAttribute="bottom" secondItem="qMz-hq-u8f" secondAttribute="bottom" id="kfz-iW-PfV"/>
+                                            <constraint firstAttribute="trailing" secondItem="qMz-hq-u8f" secondAttribute="trailing" constant="8" id="zyy-by-Dio"/>
                                         </constraints>
                                     </view>
                                     <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Eh-b9-dES">
@@ -42,9 +99,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="172"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcm-lj-Gaf">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcm-lj-Gaf">
                                                     <rect key="frame" x="0.0" y="0.0" width="343" height="172"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="32"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -91,8 +148,12 @@
                     <connections>
                         <outlet property="resultsAreaView" destination="6Eh-b9-dES" id="Ssm-5N-ePe"/>
                         <outlet property="resultsHintLabel" destination="dcm-lj-Gaf" id="OeW-M1-XJW"/>
-                        <outlet property="selectionAreaView" destination="LBJ-cO-2X1" id="gZo-M1-z6X"/>
+                        <outlet property="selectionAreaView" destination="aec-JE-E7q" id="8ij-ZP-wwg"/>
                         <outlet property="titleLabel" destination="LBJ-cO-2X1" id="UjT-uX-q8l"/>
+                        <outletCollection property="voteButtons" destination="ueb-4d-hdk" collectionClass="NSMutableArray" id="qw6-ff-Jlx"/>
+                        <outletCollection property="voteButtons" destination="Mfr-5V-U4O" collectionClass="NSMutableArray" id="HVA-nB-dK3"/>
+                        <outletCollection property="voteButtons" destination="hvE-DK-azK" collectionClass="NSMutableArray" id="1LS-NB-M1s"/>
+                        <outletCollection property="voteButtons" destination="c9l-tL-FmS" collectionClass="NSMutableArray" id="8Gv-jy-t34"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XNJ-vu-N9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -100,4 +161,10 @@
             <point key="canvasLocation" x="72.799999999999997" y="191.37931034482759"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Button Vote 0" width="76" height="76"/>
+        <image name="Button Vote 1" width="76" height="76"/>
+        <image name="Button Vote 2" width="76" height="76"/>
+        <image name="Button Vote 3" width="76" height="76"/>
+    </resources>
 </document>
