@@ -26,7 +26,29 @@ class MainViewModelTests: XCTestCase {
 
         let result = try observable.toBlocking().first()
 
-        let expected = String.forTranslation(String.Translation.titleBefore)
+        let expected = String.forTranslation(.titleBefore)
         XCTAssertEqual(result, expected)
+    }
+
+    func testResultsHint() throws {
+        let viewModel = MainViewModel()
+        let observable = viewModel.resultsHint.subscribeOn(scheduler)
+        let result = try observable.toBlocking().first()
+        let expected = String.forTranslation(.resultsHint)
+        XCTAssertEqual(result, expected)
+    }
+
+    func testSelectionAreaOpacity() throws {
+        let viewModel = MainViewModel()
+        let observable = viewModel.selectionAreaOpacity.subscribeOn(scheduler)
+        let result = try observable.toBlocking().first() ?? -1.0
+        XCTAssertTrue(result § 1.0)
+    }
+
+    func testResultsAreaOpacity() throws {
+        let viewModel = MainViewModel()
+        let observable = viewModel.resultsAreaOpacity.subscribeOn(scheduler)
+        let result = try observable.toBlocking().first() ?? -1.0
+        XCTAssertTrue(result § 1.0)
     }
 }

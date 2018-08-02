@@ -11,6 +11,7 @@ import Foundation
 extension String {
     enum Translation: String {
         case titleBefore = "title_before"
+        case resultsHint = "results_hint"
     }
 
     static func forTranslation(_ translation: String.Translation) -> String {
