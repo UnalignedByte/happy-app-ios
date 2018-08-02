@@ -16,6 +16,9 @@ protocol MainViewModelProtocol {
 }
 
 class MainViewModel {
+}
+
+extension MainViewModel: MainViewModelProtocol {
     var title: Observable<String> {
         return Observable.just(String.forTranslation(.titleBefore))
     }

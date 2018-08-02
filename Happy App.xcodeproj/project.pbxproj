@@ -19,6 +19,7 @@
 		B514F5B0211346C10034F4EA /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B514F5AF211346C10034F4EA /* DoubleExtension.swift */; };
 		B514F5B321134BBB0034F4EA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B514F5B221134BBB0034F4EA /* MainViewController.swift */; };
 		B514F5B521134C030034F4EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B514F5B421134C030034F4EA /* Main.storyboard */; };
+		B514F5B7211379230034F4EA /* StoryboardSwinjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B514F5B6211379230034F4EA /* StoryboardSwinjectExtension.swift */; };
 		B56AC4FA20C324AE00111D65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56AC4F920C324AE00111D65 /* LaunchScreen.storyboard */; };
 		B56AC50A20C32CD300111D65 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56AC50920C32CD300111D65 /* main.swift */; };
 		B56AC50C20C32D7700111D65 /* UnitTestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56AC50B20C32D7700111D65 /* UnitTestsAppDelegate.swift */; };
@@ -74,6 +75,7 @@
 		B514F5AF211346C10034F4EA /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		B514F5B221134BBB0034F4EA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B514F5B421134C030034F4EA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B514F5B6211379230034F4EA /* StoryboardSwinjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardSwinjectExtension.swift; sourceTree = "<group>"; };
 		B56AC4F920C324AE00111D65 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B56AC4FF20C32BD200111D65 /* Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56AC50320C32BD200111D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				B5A7DC112101795000A1338F /* None.swift */,
 				B514F5AC21133E480034F4EA /* StringExtension.swift */,
 				B514F5AF211346C10034F4EA /* DoubleExtension.swift */,
+				B514F5B6211379230034F4EA /* StoryboardSwinjectExtension.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -472,11 +475,15 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Happy App/Pods-Happy App-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -574,6 +581,7 @@
 				B56AC50C20C32D7700111D65 /* UnitTestsAppDelegate.swift in Sources */,
 				B5F52E972109112700F85B54 /* PersistenceManager.swift in Sources */,
 				B593A22820F170420010BE53 /* HappinessStatus.swift in Sources */,
+				B514F5B7211379230034F4EA /* StoryboardSwinjectExtension.swift in Sources */,
 				B5034D7720F2B8D40053B9EC /* HappinessSubmission.swift in Sources */,
 				B5CD81BC20EE77A2009E0AD9 /* Result.swift in Sources */,
 				B514F5B321134BBB0034F4EA /* MainViewController.swift in Sources */,

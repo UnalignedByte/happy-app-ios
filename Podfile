@@ -5,6 +5,7 @@ inhibit_all_warnings!
 target 'Happy App' do
   pod 'RxCocoa'
   pod 'SwiftLint'
+  pod 'SwinjectStoryboard'
 end
 
 target 'Unit Tests' do
