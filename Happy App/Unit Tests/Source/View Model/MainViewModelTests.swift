@@ -13,42 +13,64 @@ import RxBlocking
 import RxSwift
 
 class MainViewModelTests: XCTestCase {
-    var scheduler: ConcurrentDispatchQueueScheduler!
+    var disposeBag: DisposeBag!
+    var testScheduler: TestScheduler!
+    var viewModel: MainViewModel!
 
     override func setUp() {
         super.setUp()
-        scheduler = ConcurrentDispatchQueueScheduler(qos: .default)
+        disposeBag = DisposeBag()
+        testScheduler = TestScheduler(initialClock: 0)
+        viewModel = MainViewModel()
     }
 
     func testTitle() throws {
-        let viewModel = MainViewModel()
-        let observable = viewModel.title.subscribeOn(scheduler)
+        let observer = testScheduler.createObserver(String.self)
+        viewModel.title.subscribe(observer).disposed(by: disposeBag)
+        testScheduler.start()
 
-        let result = try observable.toBlocking().first()
-
-        let expected = String.forTranslation(.titleBefore)
-        XCTAssertEqual(result, expected)
+        let expected = [(next(0, String.forTranslation(.titleBefore)))]
+        XCTAssertEqual(observer.events, expected)
     }
 
     func testResultsHint() throws {
-        let viewModel = MainViewModel()
-        let observable = viewModel.resultsHint.subscribeOn(scheduler)
-        let result = try observable.toBlocking().first()
-        let expected = String.forTranslation(.resultsHint)
-        XCTAssertEqual(result, expected)
+        let observer = testScheduler.createObserver(String.self)
+        viewModel.resultsHint.subscribe(observer).disposed(by: disposeBag)
+        testScheduler.start()
+
+        let expected = [(next(0, String.forTranslation(.resultsHint)))]
+        XCTAssertEqual(observer.events, expected)
     }
 
     func testSelectionAreaOpacity() throws {
-        let viewModel = MainViewModel()
-        let observable = viewModel.selectionAreaOpacity.subscribeOn(scheduler)
-        let result = try observable.toBlocking().first() ?? -1.0
-        XCTAssertTrue(result § 1.0)
+        let observer = testScheduler.createObserver(Double.self)
+        viewModel.selectionAreaOpacity.subscribe(observer).disposed(by: disposeBag)
+        testScheduler.start()
+
+        let expected = [(next(0, 1.0))]
+        XCTAssertEqual(observer.events, expected)
     }
 
     func testResultsAreaOpacity() throws {
-        let viewModel = MainViewModel()
-        let observable = viewModel.resultsAreaOpacity.subscribeOn(scheduler)
-        let result = try observable.toBlocking().first() ?? -1.0
-        XCTAssertTrue(result § 1.0)
+        let observer = testScheduler.createObserver(Double.self)
+        viewModel.resultsAreaOpacity.subscribe(observer).disposed(by: disposeBag)
+        testScheduler.start()
+
+        let expected = [next(0, 1.0)]
+        XCTAssertEqual(observer.events, expected)
+    }
+
+    func testResultsOpacity() throws {
+        viewModel.userManager = MockUserManager()
+
+        let observer = testScheduler.createObserver(Double.self)
+        viewModel.resultsOpacity.subscribe(observer).disposed(by: disposeBag)
+        testScheduler.start()
+
+        viewModel.viewDidLoad()
+        viewModel.voteButtonPressed(atIndex: 1)
+
+        let expected = [next(0, 0.0), next(0, 1.0)]
+        XCTAssertEqual(observer.events, expected)
     }
 }

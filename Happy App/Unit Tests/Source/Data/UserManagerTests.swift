@@ -42,7 +42,7 @@ class UserManagerTests: XCTestCase {
         let result2 = try observable.toBlocking().first()
         XCTAssertEqual(result2, .success(true))
 
-        userManager.submit(happinessLevel: 1)
+        userManager.submit(happinessPercentage: 1)
 
         let result3 = try observable.toBlocking().first()
         XCTAssertEqual(result3, .success(false))

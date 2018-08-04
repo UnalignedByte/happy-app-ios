@@ -40,6 +40,7 @@
 		B5CD81B720EE7418009E0AD9 /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD81B620EE7418009E0AD9 /* DataManagerTests.swift */; };
 		B5CD81BA20EE7766009E0AD9 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD81B920EE7766009E0AD9 /* DataManager.swift */; };
 		B5CD81BC20EE77A2009E0AD9 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD81BB20EE77A2009E0AD9 /* Result.swift */; };
+		B5CDBE5E211619A5002BE178 /* MockUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CDBE5D211619A5002BE178 /* MockUserManager.swift */; };
 		B5E6456720F3C03900849EB7 /* WebApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E6456620F3C03900849EB7 /* WebApi.swift */; };
 		B5ED4B172091D165004FCD01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5ED4B162091D165004FCD01 /* AppDelegate.swift */; };
 		B5ED4B1E2091D166004FCD01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5ED4B1D2091D166004FCD01 /* Assets.xcassets */; };
@@ -101,6 +102,7 @@
 		B5CD81B620EE7418009E0AD9 /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
 		B5CD81B920EE7766009E0AD9 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		B5CD81BB20EE77A2009E0AD9 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		B5CDBE5D211619A5002BE178 /* MockUserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserManager.swift; sourceTree = "<group>"; };
 		B5E6456620F3C03900849EB7 /* WebApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApi.swift; sourceTree = "<group>"; };
 		B5ED4B132091D165004FCD01 /* Happy App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happy App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5ED4B162091D165004FCD01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				B5A7DC0F210163B000A1338F /* MockDataManager.swift */,
 				B5F52E9821092A5C00F85B54 /* MockTimeManager.swift */,
 				B5F52E9A21092ABB00F85B54 /* MockPersistenceManager.swift */,
+				B5CDBE5D211619A5002BE178 /* MockUserManager.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -415,6 +418,9 @@
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
 			mainGroup = B5ED4B0A2091D165004FCD01;
 			productRefGroup = B5ED4B142091D165004FCD01 /* Products */;
 			projectDirPath = "";
@@ -570,6 +576,7 @@
 				B5F52E9921092A5C00F85B54 /* MockTimeManager.swift in Sources */,
 				B593A22220F164300010BE53 /* DataFetcherTests.swift in Sources */,
 				B5034D7B20F2BA9C0053B9EC /* MockDataPusher.swift in Sources */,
+				B5CDBE5E211619A5002BE178 /* MockUserManager.swift in Sources */,
 				B5F52E9321087B3100F85B54 /* TimeManagerTests.swift in Sources */,
 				B5A7DC082101153600A1338F /* WebApiTests.swift in Sources */,
 			);

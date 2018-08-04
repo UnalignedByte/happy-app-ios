@@ -20,6 +20,7 @@ protocol MainViewModelProtocol {
     var resultWorldToday: Observable<String> { get }
     var resultWorldAllTime: Observable<String> { get }
 
+    func viewDidLoad()
     func voteButtonPressed(atIndex index: Int)
 }
 
@@ -69,6 +70,11 @@ extension MainViewModel: MainViewModelProtocol {
 
     var resultWorldAllTime: Observable<String> {
         return Observable.just("+14%")
+    }
+
+    func viewDidLoad() {
+        guard let userManager = userManager else { fatalError() }
+        userManager.logIn()
     }
 
     func voteButtonPressed(atIndex index: Int) {
