@@ -22,6 +22,7 @@ class MainViewModelTests: XCTestCase {
         disposeBag = DisposeBag()
         testScheduler = TestScheduler(initialClock: 0)
         viewModel = MainViewModel()
+        viewModel.userManager = MockUserManager()
     }
 
     func testTitle() throws {
@@ -29,7 +30,12 @@ class MainViewModelTests: XCTestCase {
         viewModel.title.subscribe(observer).disposed(by: disposeBag)
         testScheduler.start()
 
-        let expected = [(next(0, String.forTranslation(.titleBefore)))]
+        viewModel.viewDidLoad()
+        viewModel.voteButtonPressed(atIndex: 1)
+
+        let expected = [next(0, String.forTranslation(.titleBefore)),
+                        next(0, String.forTranslation(.titleWaiting)),
+                        next(0, String.forTranslation(.titleAfter))]
         XCTAssertEqual(observer.events, expected)
     }
 
@@ -38,7 +44,10 @@ class MainViewModelTests: XCTestCase {
         viewModel.resultsHint.subscribe(observer).disposed(by: disposeBag)
         testScheduler.start()
 
-        let expected = [(next(0, String.forTranslation(.resultsHint)))]
+        viewModel.viewDidLoad()
+        viewModel.voteButtonPressed(atIndex: 1)
+
+        let expected = [next(0, String.forTranslation(.resultsHint)), next(0, "")]
         XCTAssertEqual(observer.events, expected)
     }
 
@@ -47,7 +56,10 @@ class MainViewModelTests: XCTestCase {
         viewModel.selectionAreaOpacity.subscribe(observer).disposed(by: disposeBag)
         testScheduler.start()
 
-        let expected = [(next(0, 1.0))]
+        viewModel.viewDidLoad()
+        viewModel.voteButtonPressed(atIndex: 1)
+
+        let expected = [next(0, 1.0), next(0, 0.5), next(0, 0.0)]
         XCTAssertEqual(observer.events, expected)
     }
 
@@ -56,13 +68,14 @@ class MainViewModelTests: XCTestCase {
         viewModel.resultsAreaOpacity.subscribe(observer).disposed(by: disposeBag)
         testScheduler.start()
 
-        let expected = [next(0, 1.0)]
+        viewModel.viewDidLoad()
+        viewModel.voteButtonPressed(atIndex: 1)
+
+        let expected = [next(0, 1.0), next(0, 0.5), next(0, 1.0)]
         XCTAssertEqual(observer.events, expected)
     }
 
     func testResultsOpacity() throws {
-        viewModel.userManager = MockUserManager()
-
         let observer = testScheduler.createObserver(Double.self)
         viewModel.resultsOpacity.subscribe(observer).disposed(by: disposeBag)
         testScheduler.start()
