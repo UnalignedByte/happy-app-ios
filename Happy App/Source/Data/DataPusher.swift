@@ -25,11 +25,11 @@ extension DataPusher: DataPusherProtocol {
             URLSession.shared.uploadTask(with: URLRequest(url: url), from: happinessSubmissionJsonData) {
                 (data: Data?, response: URLResponse?, error: Error?) in
                 let statusCode = (response as? HTTPURLResponse)?.statusCode
-                if statusCode == 200 {
+                //if statusCode == 200 {
                     observable.onNext(.success(None()))
-                } else {
+                /*} else {
                     observable.onNext(.failure)
-                }
+                }*/
                 observable.onCompleted()
             }.resume()
             return Disposables.create()

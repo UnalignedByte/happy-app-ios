@@ -35,14 +35,14 @@ class UserManagerTests: XCTestCase {
         let observable = userManager.canSubmit.subscribeOn(scheduler)
 
         let result1 = try observable.toBlocking().first()
-        XCTAssertEqual(result1, .success(false))
+        XCTAssertEqual(result1, .failure)
 
         userManager.logIn()
 
         let result2 = try observable.toBlocking().first()
         XCTAssertEqual(result2, .success(true))
 
-        userManager.submit(happinessLevel: 1)
+        userManager.submit(happinessPercentage: 1)
 
         let result3 = try observable.toBlocking().first()
         XCTAssertEqual(result3, .success(false))

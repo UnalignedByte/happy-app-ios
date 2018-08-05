@@ -1,0 +1,14 @@
+/* 
+  File.strings
+  Happy App
+
+  Created by Rafal Grodzinski on 02/08/2018.
+  Copyright © 2018 UnalignedByte. All rights reserved.
+*/
+
+"title_before" = "How happy are you today?";
+"results_hint" = "Vote to see today’s results";
+"title_waiting" = "Submitting Your Vote...";
+"title_after" = "Thank you for voting today!";
+"error_submitting" = "There was a problem submitting your vote";
+"error_unknown" = "An Unknown error occured!";

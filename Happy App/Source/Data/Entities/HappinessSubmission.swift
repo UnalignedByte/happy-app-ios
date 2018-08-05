@@ -9,10 +9,10 @@
 import Foundation
 
 struct HappinessSubmission {
-    let happinessLevel: Int
+    let happinessPercentage: Int
 
-    init(happinessLevel: Int) {
-        self.happinessLevel = happinessLevel
+    init(happinessPercentage: Int) {
+        self.happinessPercentage = happinessPercentage
     }
 }
 

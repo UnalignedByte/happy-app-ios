@@ -11,7 +11,7 @@ import RxSwift
 protocol UserManagerProtocol {
     var canSubmit: Observable<Result<Bool>> { get }
     var isLoggedIn: Observable<Result<Bool>> { get }
-    @discardableResult func submit(happinessLevel: Int) -> Observable<Result<None>>
+    @discardableResult func submit(happinessPercentage: Int) -> Observable<Result<None>>
     func logIn()
 }
 
@@ -35,10 +35,14 @@ extension UserManager: UserManagerProtocol {
                 return Observable.just(.failure)
             }
 
-            if isLoggedIn, let date = dateResult.value {
-                return timeManager.isDayElapsed(since: date)
+            if isLoggedIn {
+                if let date = dateResult.value {
+                    return timeManager.isDayElapsed(since: date)
+                } else {
+                    return Observable.just(.success(true))
+                }
             } else {
-                return Observable.just(.success(isLoggedIn))
+                return Observable.just(.failure)
             }
         }.switchLatest()
     }
@@ -47,12 +51,12 @@ extension UserManager: UserManagerProtocol {
         return isLoggedInVar.asObservable().map { .success($0) }
     }
 
-    @discardableResult func submit(happinessLevel: Int) -> Observable<Result<None>> {
+    @discardableResult func submit(happinessPercentage: Int) -> Observable<Result<None>> {
         guard let dataManager = dataManager, let persistenceManager = persistenceManager else {
             return Observable.just(.failure)
         }
 
-        let submission = HappinessSubmission(happinessLevel: happinessLevel)
+        let submission = HappinessSubmission(happinessPercentage: happinessPercentage)
 
         let submissionStatus = dataManager.push(happinessSubmission: submission)
         submissionStatus.subscribe(onNext: { _ in
@@ -66,8 +70,7 @@ extension UserManager: UserManagerProtocol {
 
         let userLogin = UserLogin(key: "dummy")
 
-        let loginStatus = dataManager.push(userLogin: userLogin)
-        loginStatus.subscribe(onNext: { result in
+        dataManager.push(userLogin: userLogin).subscribe(onNext: { result in
             self.isLoggedInVar.value = result != Result<None>.failure
         }).disposed(by: disposeBag)
     }
