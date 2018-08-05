@@ -49,7 +49,7 @@ class MainViewController: UIViewController {
 
     private func setupBackground() {
         guard let metalDevice = MTLCreateSystemDefaultDevice() else { fatalError() }
-        ciContext = CIContext(mtlDevice: metalDevice)
+        ciContext = CIContext(mtlDevice: metalDevice, options: [.workingColorSpace: NSNull()])
 
         let imgNumber = Int.random(in: 0...1)
 
@@ -63,7 +63,8 @@ class MainViewController: UIViewController {
                 return self?.colorFor(time: $0)
             }.map { [weak self] color in
                 if let self = self, let color = color {
-                    return self.colorize(context: self.ciContext, colorFilter: self.topColorFilter, maskFilter: self.topMaskFilter, color: color)
+                    return self.colorize(context: self.ciContext, colorFilter: self.topColorFilter,
+                                         maskFilter: self.topMaskFilter, color: color)
                 } else {
                     return UIImage()
                 }
@@ -82,7 +83,8 @@ class MainViewController: UIViewController {
                 return self?.colorFor(time: $0 + 150)
             }.map { [weak self] color in
                 if let self = self, let color = color {
-                    return self.colorize(context: self.ciContext, colorFilter: self.bottomColorFilter, maskFilter: self.bottomMaskFilter, color: color)
+                    return self.colorize(context: self.ciContext, colorFilter: self.bottomColorFilter,
+                                         maskFilter: self.bottomMaskFilter, color: color)
                 } else {
                     return UIImage()
                 }
