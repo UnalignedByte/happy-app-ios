@@ -113,7 +113,7 @@
                                                     <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <size key="shadowOffset" width="1" height="1"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXG-4M-sLM">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SXG-4M-sLM">
                                                     <rect key="frame" x="15.999999999999996" y="66" width="48.666666666666657" height="37"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                                     <color key="textColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -121,7 +121,7 @@
                                                     <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <size key="shadowOffset" width="1" height="1"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSL-sa-F0T">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SSL-sa-F0T">
                                                     <rect key="frame" x="16" y="110.99999999999994" width="75.333333333333329" height="37"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                                     <color key="textColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -129,15 +129,15 @@
                                                     <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <size key="shadowOffset" width="1" height="1"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0v3-Q1-dXg">
-                                                    <rect key="frame" x="132.66666666666666" y="21" width="77.333333333333343" height="37"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0v3-Q1-dXg">
+                                                    <rect key="frame" x="132.66666666666663" y="21" width="77.333333333333343" height="37"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                                     <color key="textColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <size key="shadowOffset" width="1" height="1"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QU-mh-FDv">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8QU-mh-FDv">
                                                     <rect key="frame" x="226" y="21" width="101" height="37"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                                     <color key="textColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -145,7 +145,7 @@
                                                     <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <size key="shadowOffset" width="1" height="1"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BN1-Lc-tJn">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BN1-Lc-tJn">
                                                     <rect key="frame" x="136.33333333333334" y="66" width="70" height="37"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                                     <color key="textColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -153,7 +153,7 @@
                                                     <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <size key="shadowOffset" width="1" height="1"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5H-tB-o8Z">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Y5H-tB-o8Z">
                                                     <rect key="frame" x="241.66666666666669" y="66" width="70" height="37"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                                     <color key="textColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -161,7 +161,7 @@
                                                     <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <size key="shadowOffset" width="1" height="1"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5b-Zc-HnG">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="n5b-Zc-HnG">
                                                     <rect key="frame" x="136.33333333333334" y="110.99999999999994" width="70" height="37"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                                     <color key="textColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -169,7 +169,7 @@
                                                     <color key="shadowColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <size key="shadowOffset" width="1" height="1"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cat-lk-W2D">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cat-lk-W2D">
                                                     <rect key="frame" x="241.66666666666669" y="110.99999999999994" width="70" height="37"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                                     <color key="textColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -180,15 +180,18 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="SSL-sa-F0T" firstAttribute="top" secondItem="SXG-4M-sLM" secondAttribute="bottom" constant="8" id="22a-YH-PY8"/>
+                                                <constraint firstItem="BN1-Lc-tJn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SXG-4M-sLM" secondAttribute="trailing" constant="16" id="3MI-xk-nFR"/>
                                                 <constraint firstItem="n5b-Zc-HnG" firstAttribute="centerX" secondItem="BN1-Lc-tJn" secondAttribute="centerX" id="85j-tS-LlQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="dcm-lj-Gaf" secondAttribute="trailing" id="C4i-Cn-hKh"/>
                                                 <constraint firstItem="n5b-Zc-HnG" firstAttribute="centerY" secondItem="SSL-sa-F0T" secondAttribute="centerY" id="HZG-cn-ROX"/>
                                                 <constraint firstItem="dcm-lj-Gaf" firstAttribute="top" secondItem="gWm-CT-Cjc" secondAttribute="top" id="Lwr-ch-sZw"/>
+                                                <constraint firstItem="n5b-Zc-HnG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SSL-sa-F0T" secondAttribute="trailing" constant="16" id="OtD-U3-1nz"/>
                                                 <constraint firstAttribute="trailing" secondItem="8QU-mh-FDv" secondAttribute="trailing" constant="16" id="QjW-0I-aM6"/>
                                                 <constraint firstItem="SXG-4M-sLM" firstAttribute="top" secondItem="0v3-Q1-dXg" secondAttribute="bottom" constant="8" id="Ro6-r0-Xj7"/>
                                                 <constraint firstItem="Y5H-tB-o8Z" firstAttribute="centerY" secondItem="SXG-4M-sLM" secondAttribute="centerY" id="VlS-XB-c3q"/>
                                                 <constraint firstAttribute="bottom" secondItem="dcm-lj-Gaf" secondAttribute="bottom" id="cbz-L6-Yeg"/>
-                                                <constraint firstItem="8QU-mh-FDv" firstAttribute="leading" secondItem="0v3-Q1-dXg" secondAttribute="trailing" constant="16" id="e04-jD-mGq"/>
+                                                <constraint firstItem="cat-lk-W2D" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="n5b-Zc-HnG" secondAttribute="trailing" constant="16" id="deE-RN-GSF"/>
+                                                <constraint firstItem="8QU-mh-FDv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0v3-Q1-dXg" secondAttribute="trailing" constant="16" id="e04-jD-mGq"/>
                                                 <constraint firstItem="SXG-4M-sLM" firstAttribute="top" secondItem="8QU-mh-FDv" secondAttribute="bottom" constant="8" id="eVT-VG-RMe"/>
                                                 <constraint firstItem="SXG-4M-sLM" firstAttribute="leading" secondItem="gWm-CT-Cjc" secondAttribute="leading" constant="16" id="ezk-EM-kuW"/>
                                                 <constraint firstAttribute="bottom" secondItem="SSL-sa-F0T" secondAttribute="bottom" constant="24" id="hSP-6O-23R"/>
@@ -198,6 +201,7 @@
                                                 <constraint firstItem="BN1-Lc-tJn" firstAttribute="centerY" secondItem="SXG-4M-sLM" secondAttribute="centerY" id="sJC-v1-pQY"/>
                                                 <constraint firstItem="dcm-lj-Gaf" firstAttribute="leading" secondItem="gWm-CT-Cjc" secondAttribute="leading" id="sSt-iu-FZa"/>
                                                 <constraint firstItem="cat-lk-W2D" firstAttribute="centerY" secondItem="SSL-sa-F0T" secondAttribute="centerY" id="uWR-EX-JYh"/>
+                                                <constraint firstItem="Y5H-tB-o8Z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BN1-Lc-tJn" secondAttribute="trailing" constant="16" id="wlq-hy-xB9"/>
                                                 <constraint firstItem="Y5H-tB-o8Z" firstAttribute="centerX" secondItem="8QU-mh-FDv" secondAttribute="centerX" id="yvT-Vp-2D2"/>
                                             </constraints>
                                         </view>

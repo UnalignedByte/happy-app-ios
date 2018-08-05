@@ -48,12 +48,14 @@ class MainViewController: UIViewController {
     }
 
     private func setupBackground() {
+        let imgNumber = Int.random(in: 0...1)
+
         topColorFilter = CIFilter(name: "CIConstantColorGenerator")
-        guard let uiTopMaskImage = UIImage(named: "Background 0 Top") else { fatalError() }
+        guard let uiTopMaskImage = UIImage(named: "Background \(imgNumber) Top") else { fatalError() }
         guard let topMaskImage = CIImage(image: uiTopMaskImage) else { fatalError() }
         topMaskFilter = CIFilter(name: "CIBlendWithMask", parameters: [kCIInputMaskImageKey: topMaskImage])
 
-        Observable<Int>.interval(1.0/10.0, scheduler: ConcurrentDispatchQueueScheduler(qos: .default))
+        Observable<Int>.interval(1.0/30.0, scheduler: ConcurrentDispatchQueueScheduler(qos: .default))
             .map { [weak self] in
                 return self?.colorFor(time: $0)
             }.map { [weak self] color in
@@ -68,13 +70,13 @@ class MainViewController: UIViewController {
             }).disposed(by: disposeBag)
 
         bottomColorFilter = CIFilter(name: "CIConstantColorGenerator")
-        guard let uiBottomMaskImage = UIImage(named: "Background 0 Bottom") else { fatalError() }
+        guard let uiBottomMaskImage = UIImage(named: "Background \(imgNumber) Bottom") else { fatalError() }
         guard let bottomMaskImage = CIImage(image: uiBottomMaskImage) else { fatalError() }
         bottomMaskFilter = CIFilter(name: "CIBlendWithMask", parameters: [kCIInputMaskImageKey: bottomMaskImage])
 
-        Observable<Int>.interval(1.0/10.0, scheduler: ConcurrentDispatchQueueScheduler(qos: .default))
+        Observable<Int>.interval(1.0/28.0, scheduler: ConcurrentDispatchQueueScheduler(qos: .default))
             .map { [weak self] in
-                return self?.colorFor(time: $0 + 50)
+                return self?.colorFor(time: $0 + 150)
             }.map { [weak self] color in
                 if let self = self, let color = color {
                     return self.colorize(context: self.ciContext, colorFilter: self.bottomColorFilter, maskFilter: self.bottomMaskFilter, color: color)
@@ -145,7 +147,7 @@ class MainViewController: UIViewController {
     }
 
     private func colorFor(time: Int) -> UIColor {
-        return UIColor(hue: CGFloat(time % 100)/100.0, saturation: 0.8, brightness: 0.8, alpha: 1.0)
+        return UIColor(hue: CGFloat(time % 300)/300.0, saturation: 0.9, brightness: 0.9, alpha: 1.0)
     }
 
     private func colorize(context: CIContext, colorFilter: CIFilter, maskFilter: CIFilter, color: UIColor) -> UIImage {
