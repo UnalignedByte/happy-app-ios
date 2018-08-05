@@ -8,8 +8,12 @@
 
 import RxCocoa
 import RxSwift
+import CoreImage
 
 class MainViewController: UIViewController {
+    @IBOutlet private weak var backgroundImageTop: UIImageView!
+    @IBOutlet private weak var backgroundImageBottom: UIImageView!
+
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var resultsHintLabel: UILabel!
     @IBOutlet private weak var selectionAreaView: UIView!
@@ -26,14 +30,61 @@ class MainViewController: UIViewController {
     @IBOutlet private var resultWorldTodayLabel: UILabel!
     @IBOutlet private var resultWorldAllTimeLabel: UILabel!
 
+    private let ciContext = CIContext()
+    private var topColorFilter: CIFilter!
+    private var topMaskFilter: CIFilter!
+    private var bottomColorFilter: CIFilter!
+    private var bottomMaskFilter: CIFilter!
+
     private let disposeBag = DisposeBag()
     var viewModel: MainViewModelProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupBackground()
         setupTitle()
         setupSelectionArea()
         setupResultsArea()
+    }
+
+    private func setupBackground() {
+        topColorFilter = CIFilter(name: "CIConstantColorGenerator")
+        guard let uiTopMaskImage = UIImage(named: "Background 0 Top") else { fatalError() }
+        guard let topMaskImage = CIImage(image: uiTopMaskImage) else { fatalError() }
+        topMaskFilter = CIFilter(name: "CIBlendWithMask", parameters: [kCIInputMaskImageKey: topMaskImage])
+
+        Observable<Int>.interval(1.0/10.0, scheduler: ConcurrentDispatchQueueScheduler(qos: .default))
+            .map { [weak self] in
+                return self?.colorFor(time: $0)
+            }.map { [weak self] color in
+                if let self = self, let color = color {
+                    return self.colorize(context: self.ciContext, colorFilter: self.topColorFilter, maskFilter: self.topMaskFilter, color: color)
+                } else {
+                    return UIImage()
+                }
+            }.observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] (image) in
+                self?.backgroundImageTop.image = image
+            }).disposed(by: disposeBag)
+
+        bottomColorFilter = CIFilter(name: "CIConstantColorGenerator")
+        guard let uiBottomMaskImage = UIImage(named: "Background 0 Bottom") else { fatalError() }
+        guard let bottomMaskImage = CIImage(image: uiBottomMaskImage) else { fatalError() }
+        bottomMaskFilter = CIFilter(name: "CIBlendWithMask", parameters: [kCIInputMaskImageKey: bottomMaskImage])
+
+        Observable<Int>.interval(1.0/10.0, scheduler: ConcurrentDispatchQueueScheduler(qos: .default))
+            .map { [weak self] in
+                return self?.colorFor(time: $0 + 50)
+            }.map { [weak self] color in
+                if let self = self, let color = color {
+                    return self.colorize(context: self.ciContext, colorFilter: self.bottomColorFilter, maskFilter: self.bottomMaskFilter, color: color)
+                } else {
+                    return UIImage()
+                }
+            }.observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] (image) in
+                self?.backgroundImageBottom.image = image
+            }).disposed(by: disposeBag)
     }
 
     private func setupTitle() {
@@ -91,5 +142,17 @@ class MainViewController: UIViewController {
         viewModel.resultYouAllTime.bind(to: resultYouAllTimeLabel.rx.text).disposed(by: disposeBag)
         viewModel.resultWorldToday.bind(to: resultWorldTodayLabel.rx.text).disposed(by: disposeBag)
         viewModel.resultWorldAllTime.bind(to: resultWorldAllTimeLabel.rx.text).disposed(by: disposeBag)
+    }
+
+    private func colorFor(time: Int) -> UIColor {
+        return UIColor(hue: CGFloat(time % 100)/100.0, saturation: 0.8, brightness: 0.8, alpha: 1.0)
+    }
+
+    private func colorize(context: CIContext, colorFilter: CIFilter, maskFilter: CIFilter, color: UIColor) -> UIImage {
+        colorFilter.setValue(CIColor(color: color), forKey: kCIInputColorKey)
+        maskFilter.setValue(colorFilter.outputImage, forKey: kCIInputImageKey)
+        guard let ciImage = maskFilter.outputImage else { fatalError() }
+        guard let cgImage = context.createCGImage(ciImage, from: ciImage.extent) else { fatalError() }
+        return UIImage(cgImage: cgImage)
     }
 }
