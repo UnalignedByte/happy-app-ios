@@ -30,7 +30,7 @@ class MainViewController: UIViewController {
     @IBOutlet private var resultWorldTodayLabel: UILabel!
     @IBOutlet private var resultWorldAllTimeLabel: UILabel!
 
-    private let ciContext = CIContext()
+    private var ciContext: CIContext!
     private var topColorFilter: CIFilter!
     private var topMaskFilter: CIFilter!
     private var bottomColorFilter: CIFilter!
@@ -48,6 +48,9 @@ class MainViewController: UIViewController {
     }
 
     private func setupBackground() {
+        guard let metalDevice = MTLCreateSystemDefaultDevice() else { fatalError() }
+        ciContext = CIContext(mtlDevice: metalDevice)
+
         let imgNumber = Int.random(in: 0...1)
 
         topColorFilter = CIFilter(name: "CIConstantColorGenerator")
