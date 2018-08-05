@@ -35,10 +35,14 @@ extension UserManager: UserManagerProtocol {
                 return Observable.just(.failure)
             }
 
-            if isLoggedIn, let date = dateResult.value {
-                return timeManager.isDayElapsed(since: date)
+            if isLoggedIn {
+                if let date = dateResult.value {
+                    return timeManager.isDayElapsed(since: date)
+                } else {
+                    return Observable.just(.success(true))
+                }
             } else {
-                return Observable.just(.success(isLoggedIn))
+                return Observable.just(.failure)
             }
         }.switchLatest()
     }
@@ -66,8 +70,7 @@ extension UserManager: UserManagerProtocol {
 
         let userLogin = UserLogin(key: "dummy")
 
-        let loginStatus = dataManager.push(userLogin: userLogin)
-        loginStatus.subscribe(onNext: { result in
+        dataManager.push(userLogin: userLogin).subscribe(onNext: { result in
             self.isLoggedInVar.value = result != Result<None>.failure
         }).disposed(by: disposeBag)
     }

@@ -33,6 +33,21 @@ class MainViewModel {
     private let selectionAreaOpacityVar = Variable<Double>(1.0)
     private let resultsAreaOpacityVar = Variable<Double>(1.0)
     private let resultsOpacityVar = Variable<Double>(0.0)
+
+    private func showResults() {
+        titleVar.value = String.forTranslation(.titleAfter)
+        selectionAreaOpacityVar.value = 0.0
+        resultsAreaOpacityVar.value = 1.0
+        resultsHintVar.value = ""
+        resultsOpacityVar.value = 1.0
+    }
+
+    private func showError(message: String) {
+        titleVar.value = message
+        selectionAreaOpacityVar.value = 0.5
+        resultsAreaOpacityVar.value = 0.5
+        resultsHintVar.value = String.forTranslation(.resultsHint)
+    }
 }
 
 extension MainViewModel: MainViewModelProtocol {
@@ -75,6 +90,16 @@ extension MainViewModel: MainViewModelProtocol {
     func viewDidLoad() {
         guard let userManager = userManager else { fatalError() }
         userManager.logIn()
+
+        userManager.canSubmit.subscribe(onNext: { [weak self] result in
+            guard let canSubmit = result.value else {
+                self?.showError(message: String.forTranslation(.titleErrorUnknown))
+                return
+            }
+            if !canSubmit {
+                self?.showResults()
+            }
+        }).disposed(by: disposeBag)
     }
 
     func voteButtonPressed(atIndex index: Int) {
@@ -88,16 +113,9 @@ extension MainViewModel: MainViewModelProtocol {
         userManager.submit(happinessPercentage: happinessPercentage)
             .subscribe(onNext: { [weak self] result in
                 if result == .success(None()) {
-                    self?.titleVar.value = String.forTranslation(.titleAfter)
-                    self?.selectionAreaOpacityVar.value = 0.0
-                    self?.resultsAreaOpacityVar.value = 1.0
-                    self?.resultsHintVar.value = ""
-                    self?.resultsOpacityVar.value = 1.0
+                    self?.showResults()
                 } else {
-                    self?.titleVar.value = String.forTranslation(.titleErrorSubmitting)
-                    self?.selectionAreaOpacityVar.value = 1.0
-                    self?.resultsAreaOpacityVar.value = 1.0
-                    self?.resultsHintVar.value = String.forTranslation(.resultsHint)
+                    self?.showError(message: String.forTranslation(.titleErrorSubmitting))
                 }
             }).disposed(by: disposeBag)
     }

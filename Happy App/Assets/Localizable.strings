@@ -11,3 +11,4 @@
 "title_waiting" = "Submitting Your Vote...";
 "title_after" = "Thank you for voting today!";
 "error_submitting" = "There was a problem submitting your vote";
+"error_unknown" = "An Unknown error occured!";

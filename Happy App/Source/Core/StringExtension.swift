@@ -15,6 +15,7 @@ extension String {
         case titleWaiting = "title_waiting"
         case titleAfter = "title_after"
         case titleErrorSubmitting = "error_submitting"
+        case titleErrorUnknown = "error_unknown"
     }
 
     static func forTranslation(_ translation: String.Translation) -> String {

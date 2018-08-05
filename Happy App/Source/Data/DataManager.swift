@@ -61,6 +61,6 @@ extension DataManager: DataManagerProtocol {
     }
 
     func push(userLogin: UserLogin) -> Observable<Result<None>> {
-        return Observable.just(.failure)
+        return Observable.just(.success(None()))
     }
 }

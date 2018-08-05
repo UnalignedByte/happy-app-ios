@@ -45,6 +45,7 @@ class MainViewController: UIViewController {
         setupTitle()
         setupSelectionArea()
         setupResultsArea()
+        viewModel?.viewDidLoad()
     }
 
     private func setupBackground() {
