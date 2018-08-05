@@ -18,6 +18,10 @@ class PersistenceManagerTests: XCTestCase {
     override func setUp() {
         super.setUp()
         scheduler = ConcurrentDispatchQueueScheduler(qos: .default)
+        let keys = UserDefaults.standard.dictionaryRepresentation().keys
+        keys.forEach {
+            UserDefaults.standard.removeObject(forKey: $0)
+        }
     }
 
     func testSubmissionDateBeforeSaving() throws {

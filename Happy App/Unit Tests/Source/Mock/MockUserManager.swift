@@ -15,7 +15,7 @@ class MockUserManager: UserManagerProtocol {
 
     var canSubmit: Observable<Result<Bool>> {
         return Observable.combineLatest(hasSubmittedVar.asObservable(), isLoggedInVar.asObservable()) { (hasSubmitted, isLoggedIn) -> Observable<Result<Bool>> in
-            return Observable.just(.success(!hasSubmitted && !isLoggedIn))
+            return Observable.just(.success(!hasSubmitted && isLoggedIn))
         }.switchLatest()
     }
 
