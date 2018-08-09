@@ -49,8 +49,11 @@ class MainViewController: UIViewController {
     }
 
     private func setupBackground() {
-        guard let metalDevice = MTLCreateSystemDefaultDevice() else { fatalError() }
-        ciContext = CIContext(mtlDevice: metalDevice, options: [.workingColorSpace: NSNull()])
+        if let metalDevice = MTLCreateSystemDefaultDevice() {
+            ciContext = CIContext(mtlDevice: metalDevice, options: [.workingColorSpace: NSNull()])
+        } else {
+            ciContext = CIContext()
+        }
 
         let imgNumber = Int.random(in: 0...1)
 

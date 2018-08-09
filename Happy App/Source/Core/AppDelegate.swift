@@ -17,4 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         return true
     }
+
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        let tokens = url.host?.split(separator: "=")
+        if let tokens = tokens, tokens.count == 2 && tokens.first == "happinessPercentage", let value = Int(tokens[1]) {
+            NotificationCenter.default.post(name: Notification.Name.submitHappinessPercentage, object: nil, userInfo: ["happinessPercentage": value])
+        }
+
+        return true
+    }
 }
