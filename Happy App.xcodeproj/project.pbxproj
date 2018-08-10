@@ -114,6 +114,8 @@
 		B5403F00211C76E4003A596C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		B5403F02211C76E4003A596C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5403F0F211C9404003A596C /* NotificationNameExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtensions.swift; sourceTree = "<group>"; };
+		B5403F14211C99D3003A596C /* Happy App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Happy App.entitlements"; sourceTree = "<group>"; };
+		B5403F15211C9C78003A596C /* Happy App Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Happy App Widget.entitlements"; sourceTree = "<group>"; };
 		B56AC4F920C324AE00111D65 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B56AC4FF20C32BD200111D65 /* Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56AC50320C32BD200111D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				B5403F02211C76E4003A596C /* Info.plist */,
+				B5403F15211C9C78003A596C /* Happy App Widget.entitlements */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				B5ED4B222091D166004FCD01 /* Info.plist */,
+				B5403F14211C99D3003A596C /* Happy App.entitlements */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -506,6 +510,11 @@
 				TargetAttributes = {
 					B5403EF8211C76E4003A596C = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					B56AC4FE20C32BD200111D65 = {
 						CreatedOnToolsVersion = 9.4;
@@ -515,6 +524,11 @@
 					B5ED4B122091D165004FCD01 = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 1000;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -765,6 +779,7 @@
 		B5403F06211C76E4003A596C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Happy App Widget/Supporting Files/Happy App Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X7G47FFC9G;
 				INFOPLIST_FILE = "$(SRCROOT)/Happy App Widget/Supporting Files/Info.plist";
@@ -786,6 +801,7 @@
 		B5403F07211C76E4003A596C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Happy App Widget/Supporting Files/Happy App Widget.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X7G47FFC9G;
 				INFOPLIST_FILE = "$(SRCROOT)/Happy App Widget/Supporting Files/Info.plist";
@@ -971,6 +987,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Happy App/Supporting Files/Happy App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X7G47FFC9G;
 				INFOPLIST_FILE = "Happy App/Supporting Files/Info.plist";
@@ -991,6 +1008,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Happy App/Supporting Files/Happy App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X7G47FFC9G;
 				INFOPLIST_FILE = "Happy App/Supporting Files/Info.plist";
