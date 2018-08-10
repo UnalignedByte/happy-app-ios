@@ -1983,10 +1983,22 @@
 					3BA54DE9A636EA3152878D57C5F811A4 = {
 						LastSwiftMigration = 1000;
 					};
+					5BAACC736A5215103E10E2DC0A74FDCD = {
+						LastSwiftMigration = 1000;
+					};
+					5BAEE407D509A3F67350A21DD9179E25 = {
+						LastSwiftMigration = 1000;
+					};
 					629FA03C49F696EEDA0BA2B48834169F = {
 						LastSwiftMigration = 1000;
 					};
+					6A930222B244834CF7F024DE720840F1 = {
+						LastSwiftMigration = 1000;
+					};
 					7FAD9C2CB4D3416902E216B424652408 = {
+						LastSwiftMigration = 1000;
+					};
+					AF194279BA4BBA0A57E5ED0EEC980A51 = {
 						LastSwiftMigration = 1000;
 					};
 				};
