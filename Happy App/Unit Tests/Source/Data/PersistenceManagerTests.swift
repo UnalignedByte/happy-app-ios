@@ -18,17 +18,6 @@ class PersistenceManagerTests: XCTestCase {
     override func setUp() {
         super.setUp()
         scheduler = ConcurrentDispatchQueueScheduler(qos: .default)
-        let keys = UserDefaults.standard.dictionaryRepresentation().keys
-        keys.forEach {
-            UserDefaults.standard.removeObject(forKey: $0)
-        }
-    }
-
-    func testSubmissionDateBeforeSaving() throws {
-        let persistenceManager = PersistenceManager()
-        let observable = persistenceManager.submissionDate.subscribeOn(scheduler)
-        let result = try observable.toBlocking().first()
-        XCTAssertEqual(result, .failure)
     }
 
     func testSubmissionDateAfterSaving() throws {

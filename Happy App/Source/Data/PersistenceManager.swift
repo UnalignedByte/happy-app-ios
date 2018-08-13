@@ -16,9 +16,10 @@ protocol PersistenceManagerProtocol {
 class PersistenceManager {
     private static let kSubmissionDate = "submission_date"
     private let submissionDateVar: Variable<Result<Date>>
+    private let userDefaults: UserDefaults = UserDefaults(suiteName: "group.com.unalignedbyte.happyapp")!
 
     init() {
-        if let date = UserDefaults.standard.object(forKey: PersistenceManager.kSubmissionDate) as? Date {
+        if let date = userDefaults.object(forKey: PersistenceManager.kSubmissionDate) as? Date {
             submissionDateVar = Variable(.success(date))
         } else {
             submissionDateVar = Variable(.failure)
@@ -32,7 +33,7 @@ extension PersistenceManager: PersistenceManagerProtocol {
     }
 
     func save(submissionDate date: Date) {
-        UserDefaults.standard.set(date, forKey: PersistenceManager.kSubmissionDate)
+        userDefaults.set(date, forKey: PersistenceManager.kSubmissionDate)
         submissionDateVar.value = .success(date)
     }
 }

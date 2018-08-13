@@ -48,6 +48,22 @@ class MainViewModel {
         resultsAreaOpacityVar.value = 0.5
         resultsHintVar.value = String.forTranslation(.resultsHint)
     }
+
+    private func submit(happinessPercentage: Int) {
+        titleVar.value = String.forTranslation(.titleWaiting)
+        selectionAreaOpacityVar.value = 0.5
+        resultsAreaOpacityVar.value = 0.5
+
+        guard let userManager = userManager else { fatalError() }
+        userManager.submit(happinessPercentage: happinessPercentage)
+            .subscribe(onNext: { [weak self] result in
+                if result == .success(None()) {
+                    self?.showResults()
+                } else {
+                    self?.showError(message: String.forTranslation(.titleErrorSubmitting))
+                }
+            }).disposed(by: disposeBag)
+    }
 }
 
 extension MainViewModel: MainViewModelProtocol {
@@ -100,23 +116,16 @@ extension MainViewModel: MainViewModelProtocol {
                 self?.showResults()
             }
         }).disposed(by: disposeBag)
+
+        NotificationCenter.default.addObserver(forName: Notification.Name.submitHappinessPercentage, object: nil, queue: nil) { [weak self] notification in
+            if let value = notification.userInfo?["happinessPercentage"] as? Int {
+                self?.submit(happinessPercentage: value)
+            }
+        }
     }
 
     func voteButtonPressed(atIndex index: Int) {
-        titleVar.value = String.forTranslation(.titleWaiting)
-        selectionAreaOpacityVar.value = 0.5
-        resultsAreaOpacityVar.value = 0.5
-
         let happinessPercentage = index * 25
-
-        guard let userManager = userManager else { fatalError() }
-        userManager.submit(happinessPercentage: happinessPercentage)
-            .subscribe(onNext: { [weak self] result in
-                if result == .success(None()) {
-                    self?.showResults()
-                } else {
-                    self?.showError(message: String.forTranslation(.titleErrorSubmitting))
-                }
-            }).disposed(by: disposeBag)
+        submit(happinessPercentage: happinessPercentage)
     }
 }

@@ -21,6 +21,14 @@
 		B514F5B521134C030034F4EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B514F5B421134C030034F4EA /* Main.storyboard */; };
 		B514F5B7211379230034F4EA /* StoryboardSwinjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B514F5B6211379230034F4EA /* StoryboardSwinjectExtension.swift */; };
 		B514F5B92113806F0034F4EA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B514F5B82113806F0034F4EA /* Localizable.strings */; };
+		B5403EFB211C76E4003A596C /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5403EFA211C76E4003A596C /* NotificationCenter.framework */; };
+		B5403EFE211C76E4003A596C /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5403EFD211C76E4003A596C /* TodayViewController.swift */; };
+		B5403F01211C76E4003A596C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5403EFF211C76E4003A596C /* MainInterface.storyboard */; };
+		B5403F05211C76E4003A596C /* Happy App Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B5403EF9211C76E4003A596C /* Happy App Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B5403F0E211C7B23003A596C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5ED4B1D2091D166004FCD01 /* Assets.xcassets */; };
+		B5403F10211C9404003A596C /* NotificationNameExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5403F0F211C9404003A596C /* NotificationNameExtensions.swift */; };
+		B5403F11211C9690003A596C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B514F5AC21133E480034F4EA /* StringExtension.swift */; };
+		B5403F13211C97CD003A596C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B514F5B82113806F0034F4EA /* Localizable.strings */; };
 		B56AC4FA20C324AE00111D65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56AC4F920C324AE00111D65 /* LaunchScreen.storyboard */; };
 		B56AC50A20C32CD300111D65 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56AC50920C32CD300111D65 /* main.swift */; };
 		B56AC50C20C32D7700111D65 /* UnitTestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56AC50B20C32D7700111D65 /* UnitTestsAppDelegate.swift */; };
@@ -54,6 +62,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B5403F03211C76E4003A596C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5ED4B0B2091D165004FCD01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5403EF8211C76E4003A596C;
+			remoteInfo = "Happy App Widget";
+		};
 		B56AC50420C32BD200111D65 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B5ED4B0B2091D165004FCD01 /* Project object */;
@@ -62,6 +77,20 @@
 			remoteInfo = "Happy App";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B5403F09211C76E4003A596C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B5403F05211C76E4003A596C /* Happy App Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		16448F3080A8319D6060F4AF /* Pods-Unit Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unit Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Unit Tests/Pods-Unit Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +108,14 @@
 		B514F5B421134C030034F4EA /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B514F5B6211379230034F4EA /* StoryboardSwinjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardSwinjectExtension.swift; sourceTree = "<group>"; };
 		B514F5B82113806F0034F4EA /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		B5403EF9211C76E4003A596C /* Happy App Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Happy App Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5403EFA211C76E4003A596C /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		B5403EFD211C76E4003A596C /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		B5403F00211C76E4003A596C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		B5403F02211C76E4003A596C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5403F0F211C9404003A596C /* NotificationNameExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtensions.swift; sourceTree = "<group>"; };
+		B5403F14211C99D3003A596C /* Happy App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Happy App.entitlements"; sourceTree = "<group>"; };
+		B5403F15211C9C78003A596C /* Happy App Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Happy App Widget.entitlements"; sourceTree = "<group>"; };
 		B56AC4F920C324AE00111D65 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B56AC4FF20C32BD200111D65 /* Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56AC50320C32BD200111D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -120,6 +157,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B5403EF6211C76E4003A596C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5403EFB211C76E4003A596C /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B56AC4FC20C32BD200111D65 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -175,6 +220,41 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B5403EFC211C76E4003A596C /* Happy App Widget */ = {
+			isa = PBXGroup;
+			children = (
+				B5403F0B211C7950003A596C /* Source */,
+				B5403F0D211C7961003A596C /* Supporting Files */,
+			);
+			path = "Happy App Widget";
+			sourceTree = "<group>";
+		};
+		B5403F0B211C7950003A596C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B5403EFF211C76E4003A596C /* MainInterface.storyboard */,
+				B5403EFD211C76E4003A596C /* TodayViewController.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		B5403F0C211C7956003A596C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Supporting Files";
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		B5403F0D211C7961003A596C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5403F02211C76E4003A596C /* Info.plist */,
+				B5403F15211C9C78003A596C /* Happy App Widget.entitlements */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		B56AC4F120C31FDB00111D65 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				B5ED4B222091D166004FCD01 /* Info.plist */,
+				B5403F14211C99D3003A596C /* Happy App.entitlements */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -207,6 +288,7 @@
 		B56AC50020C32BD200111D65 /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
+				B5403F0C211C7956003A596C /* Supporting Files */,
 				B56AC50E20C32DFF00111D65 /* Source */,
 				B5CD81B320EE73A1009E0AD9 /* Assets */,
 				B56AC50F20C32E0500111D65 /* Supporting Files */,
@@ -225,6 +307,7 @@
 				B514F5AC21133E480034F4EA /* StringExtension.swift */,
 				B514F5AF211346C10034F4EA /* DoubleExtension.swift */,
 				B514F5B6211379230034F4EA /* StoryboardSwinjectExtension.swift */,
+				B5403F0F211C9404003A596C /* NotificationNameExtensions.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -305,6 +388,7 @@
 			children = (
 				B5CD81B220EE7352009E0AD9 /* README.md */,
 				B5ED4B152091D165004FCD01 /* Happy App */,
+				B5403EFC211C76E4003A596C /* Happy App Widget */,
 				B5ED4B142091D165004FCD01 /* Products */,
 				7F0C34A71D3D198C933C9253 /* Pods */,
 				EBF224CFD79B834C85EECC4E /* Frameworks */,
@@ -316,6 +400,7 @@
 			children = (
 				B5ED4B132091D165004FCD01 /* Happy App.app */,
 				B56AC4FF20C32BD200111D65 /* Unit Tests.xctest */,
+				B5403EF9211C76E4003A596C /* Happy App Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -346,6 +431,7 @@
 			children = (
 				5D3E4F3643FFAA3B52FE5D75 /* Pods_Happy_App.framework */,
 				8E7BD66A2542A695AA97819B /* Pods_Unit_Tests.framework */,
+				B5403EFA211C76E4003A596C /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -353,6 +439,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B5403EF8211C76E4003A596C /* Happy App Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5403F08211C76E4003A596C /* Build configuration list for PBXNativeTarget "Happy App Widget" */;
+			buildPhases = (
+				B5403EF5211C76E4003A596C /* Sources */,
+				B5403EF6211C76E4003A596C /* Frameworks */,
+				B5403EF7211C76E4003A596C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Happy App Widget";
+			productName = "Happy App Widget";
+			productReference = B5403EF9211C76E4003A596C /* Happy App Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		B56AC4FE20C32BD200111D65 /* Unit Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B56AC50620C32BD200111D65 /* Build configuration list for PBXNativeTarget "Unit Tests" */;
@@ -383,10 +486,12 @@
 				B5ED4B102091D165004FCD01 /* Frameworks */,
 				B5ED4B112091D165004FCD01 /* Resources */,
 				31894BCCB9E0F33EA72DF690 /* [CP] Embed Pods Frameworks */,
+				B5403F09211C76E4003A596C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B5403F04211C76E4003A596C /* PBXTargetDependency */,
 			);
 			name = "Happy App";
 			productName = "Happy App";
@@ -399,10 +504,18 @@
 		B5ED4B0B2091D165004FCD01 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = UnalignedByte;
 				TargetAttributes = {
+					B5403EF8211C76E4003A596C = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					B56AC4FE20C32BD200111D65 = {
 						CreatedOnToolsVersion = 9.4;
 						LastSwiftMigration = 1000;
@@ -411,6 +524,11 @@
 					B5ED4B122091D165004FCD01 = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 1000;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -420,6 +538,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = B5ED4B0A2091D165004FCD01;
 			productRefGroup = B5ED4B142091D165004FCD01 /* Products */;
@@ -428,11 +547,22 @@
 			targets = (
 				B5ED4B122091D165004FCD01 /* Happy App */,
 				B56AC4FE20C32BD200111D65 /* Unit Tests */,
+				B5403EF8211C76E4003A596C /* Happy App Widget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B5403EF7211C76E4003A596C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5403F0E211C7B23003A596C /* Assets.xcassets in Resources */,
+				B5403F13211C97CD003A596C /* Localizable.strings in Resources */,
+				B5403F01211C76E4003A596C /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B56AC4FD20C32BD200111D65 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -558,6 +688,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B5403EF5211C76E4003A596C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5403F11211C9690003A596C /* StringExtension.swift in Sources */,
+				B5403EFE211C76E4003A596C /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B56AC4FB20C32BD200111D65 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -589,6 +728,7 @@
 				B56AC50C20C32D7700111D65 /* UnitTestsAppDelegate.swift in Sources */,
 				B5F52E972109112700F85B54 /* PersistenceManager.swift in Sources */,
 				B593A22820F170420010BE53 /* HappinessStatus.swift in Sources */,
+				B5403F10211C9404003A596C /* NotificationNameExtensions.swift in Sources */,
 				B514F5B7211379230034F4EA /* StoryboardSwinjectExtension.swift in Sources */,
 				B5034D7720F2B8D40053B9EC /* HappinessSubmission.swift in Sources */,
 				B5CD81BC20EE77A2009E0AD9 /* Result.swift in Sources */,
@@ -612,6 +752,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B5403F04211C76E4003A596C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5403EF8211C76E4003A596C /* Happy App Widget */;
+			targetProxy = B5403F03211C76E4003A596C /* PBXContainerItemProxy */;
+		};
 		B56AC50520C32BD200111D65 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B5ED4B122091D165004FCD01 /* Happy App */;
@@ -619,7 +764,61 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		B5403EFF211C76E4003A596C /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5403F00211C76E4003A596C /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		B5403F06211C76E4003A596C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Happy App Widget/Supporting Files/Happy App Widget.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X7G47FFC9G;
+				INFOPLIST_FILE = "$(SRCROOT)/Happy App Widget/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.unalignedbyte.happyapp.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5403F07211C76E4003A596C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Happy App Widget/Supporting Files/Happy App Widget.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X7G47FFC9G;
+				INFOPLIST_FILE = "$(SRCROOT)/Happy App Widget/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.unalignedbyte.happyapp.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		B56AC50720C32BD200111D65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C74301E44E4F3D21DD3F2320 /* Pods-Unit Tests.debug.xcconfig */;
@@ -786,7 +985,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2B79FCC9BB2859C765F08850 /* Pods-Happy App.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Happy App/Supporting Files/Happy App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X7G47FFC9G;
 				INFOPLIST_FILE = "Happy App/Supporting Files/Info.plist";
@@ -805,7 +1006,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C0D65A52FCEA28164AE243E9 /* Pods-Happy App.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Happy App/Supporting Files/Happy App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X7G47FFC9G;
 				INFOPLIST_FILE = "Happy App/Supporting Files/Info.plist";
@@ -823,6 +1026,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B5403F08211C76E4003A596C /* Build configuration list for PBXNativeTarget "Happy App Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5403F06211C76E4003A596C /* Debug */,
+				B5403F07211C76E4003A596C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B56AC50620C32BD200111D65 /* Build configuration list for PBXNativeTarget "Unit Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
